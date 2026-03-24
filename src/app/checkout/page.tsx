@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { Check, ChevronRight, Lock, CreditCard, Landmark, ShieldCheck } from "lucide-react"
 import { useCartStore } from "@/lib/store/cartStore"
-import { formatPrice } from "@/lib/utils"
+import { formatPrice, calculateVat } from "@/lib/utils"
 
 type Step = "contact" | "shipping" | "payment"
 
@@ -37,6 +37,8 @@ export default function CheckoutPage() {
   const total = getTotal()
   const shipping = total >= 5000 ? 0 : 450
   const grandTotal = total + shipping
+  // BTW berekening: truffels 9%, rest 21% (NL Wet OB 1968)
+  const vatAmount = calculateVat(grandTotal, 0.21) // conservatief 21% voor mixed cart
 
   function update(field: string, value: string) {
     setForm((f) => ({ ...f, [field]: value }))

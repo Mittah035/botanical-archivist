@@ -12,6 +12,20 @@ export function formatPrice(cents: number): string {
   }).format(cents / 100)
 }
 
+// BTW tarieven conform NL wetgeving (Wet OB 1968)
+// Truffels = voedingsmiddel = 9% (Tabel I, post a.1)
+// Growkits, supplementen, accessoires = 21%
+export function getVatRate(category: string): number {
+  if (category === "truffels") return 0.09
+  return 0.21
+}
+
+export function calculateVat(priceIncl: number, vatRate: number): number {
+  // priceIncl = prijs inclusief BTW
+  // BTW bedrag = prijs_incl * (rate / (1 + rate))
+  return Math.round(priceIncl * (vatRate / (1 + vatRate)))
+}
+
 export function slugify(str: string): string {
   return str
     .toLowerCase()
