@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
@@ -8,13 +9,18 @@ import { Button } from "@/components/ui/button"
 export function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center px-6 lg:px-20 overflow-hidden">
-      {/* Background */}
+      {/* Background image */}
       <div className="absolute inset-0 z-0">
-        <div
-          className="w-full h-full bg-gradient-to-br from-primary via-primary-container to-[#2d5a3d]"
-          aria-hidden
+        <Image
+          src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1920&q=80"
+          alt="Donker bos met paddenstoelen — Botanical Archivist"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/60 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/40" />
       </div>
 
       {/* Content */}
@@ -58,7 +64,7 @@ export function HeroSection() {
           <Button
             asChild
             size="lg"
-            className="bg-primary text-white hover:bg-primary-container rounded-md px-8 py-4 font-semibold transition-all hover:-translate-y-0.5 active:scale-95"
+            className="bg-primary text-white hover:bg-primary/90 rounded-xl px-8 py-4 font-bold transition-all hover:-translate-y-0.5 active:scale-95"
           >
             <Link href="/products">
               Verken het Archief
@@ -69,21 +75,12 @@ export function HeroSection() {
             asChild
             variant="outline"
             size="lg"
-            className="border-primary/20 text-primary hover:bg-surface-container rounded-md px-8 py-4 font-semibold"
+            className="border-primary/20 text-primary hover:bg-primary/5 rounded-xl px-8 py-4 font-semibold"
           >
             <Link href="/blog">Educatieve Gids</Link>
           </Button>
         </motion.div>
       </div>
-
-      {/* Decorative circle */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 0.06, scale: 1 }}
-        transition={{ duration: 1.5, delay: 0.3 }}
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary"
-        aria-hidden
-      />
     </section>
   )
 }

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Clock, ArrowRight } from "lucide-react"
 import { FadeIn } from "@/components/animations/FadeIn"
@@ -35,8 +36,17 @@ export default function BlogPage() {
         <FadeIn className="mb-12">
           <Link href={`/blog/${featured.slug}`}>
             <div className="bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-shadow group">
-              <div className="aspect-[2/1] bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center text-8xl">
-                {featured.emoji}
+              <div className="aspect-[2/1] relative overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1200&q=80"
+                  alt={featured.title}
+                  fill
+                  priority
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 1024px) 100vw, 800px"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+                <div className="absolute bottom-4 left-4 text-4xl">{featured.emoji}</div>
               </div>
               <div className="p-6 md:p-8">
                 <div className="flex items-center gap-3 mb-3">
@@ -67,8 +77,16 @@ export default function BlogPage() {
             <StaggerItem key={post.slug}>
               <Link href={`/blog/${post.slug}`}>
                 <div className="bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-shadow group h-full flex flex-col">
-                  <div className="aspect-video bg-gradient-to-br from-primary/5 to-primary/10 flex items-center justify-center text-5xl">
-                    {post.emoji}
+                  <div className="aspect-video relative overflow-hidden">
+                    <Image
+                      src={`https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=75`}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-primary/20" />
+                    <div className="absolute bottom-3 left-3 text-2xl">{post.emoji}</div>
                   </div>
                   <div className="p-5 flex flex-col flex-1">
                     <div className="flex items-center gap-2 mb-2">

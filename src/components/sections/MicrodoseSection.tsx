@@ -1,7 +1,7 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { FadeIn } from "@/components/animations/FadeIn"
 
@@ -16,12 +16,19 @@ export function MicrodoseSection() {
   return (
     <section className="py-24 bg-primary text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        {/* Image placeholder */}
+        {/* Image */}
         <FadeIn direction="right">
           <div className="relative">
             <div className="absolute -top-12 -left-12 w-64 h-64 bg-primary-container/30 rounded-full blur-3xl" aria-hidden />
-            <div className="relative z-10 rounded-2xl w-full aspect-[4/5] bg-gradient-to-br from-primary-container to-primary flex items-center justify-center border border-white/10">
-              <span className="text-8xl">🍄</span>
+            <div className="relative z-10 rounded-2xl w-full aspect-[4/5] overflow-hidden border border-white/10">
+              <Image
+                src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=85"
+                alt="Microdosering capsules en weegschaal"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
             </div>
           </div>
         </FadeIn>

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Star, ShoppingCart, ChevronLeft, Shield, Truck, Leaf, Info, ChevronDown } from "lucide-react"
@@ -72,9 +73,26 @@ export function ProductDetailClient({
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="aspect-square rounded-2xl bg-gradient-to-br from-primary/5 to-primary/15 flex items-center justify-center text-8xl md:text-[120px] shadow-card"
+            className="aspect-square rounded-2xl overflow-hidden relative shadow-card"
           >
-            {product.emoji}
+            <Image
+              src={
+                product.category === "truffels"
+                  ? "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=800&q=85"
+                  : product.category === "growkits"
+                  ? "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?w=800&q=85"
+                  : product.category === "microdosering"
+                  ? "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=85"
+                  : "https://images.unsplash.com/photo-1585670286880-4e6f78e7d8a0?w=800&q=85"
+              }
+              alt={product.name}
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+            <div className="absolute bottom-6 left-6 text-5xl">{product.emoji}</div>
           </motion.div>
 
           {/* Info */}

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { FadeIn } from "@/components/animations/FadeIn"
 import { StaggerChildren, StaggerItem } from "@/components/animations/StaggerChildren"
 import { Leaf, Shield, FlaskConical, Heart } from "lucide-react"
@@ -64,8 +65,14 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center text-8xl">
-                🌿
+              <div className="aspect-square rounded-2xl overflow-hidden relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80"
+                  alt="Botanisch bos — het verhaal van Botanical Archivist"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
               <div>
                 <h2 className="font-display text-2xl font-bold text-primary mb-4">

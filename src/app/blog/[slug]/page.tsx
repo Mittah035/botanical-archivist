@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ChevronLeft, Clock, Calendar, User } from "lucide-react"
@@ -52,10 +53,20 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-      {/* Emoji banner */}
+      {/* Banner image */}
       <div className="max-w-3xl mx-auto px-6 md:px-20 -mt-1">
-        <div className="aspect-[3/1] bg-gradient-to-br from-primary/5 to-primary/10 rounded-b-2xl flex items-center justify-center text-7xl">
-          {post.emoji}
+        <div className="aspect-[3/1] rounded-b-2xl overflow-hidden relative">
+          <Image
+            src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1200&q=80"
+            alt={post.title}
+            fill
+            className="object-cover"
+            sizes="800px"
+          />
+          <div className="absolute inset-0 bg-primary/30" />
+          <div className="absolute inset-0 flex items-center justify-center text-7xl">
+            {post.emoji}
+          </div>
         </div>
       </div>
 

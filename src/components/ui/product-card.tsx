@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ShoppingCart, Star } from "lucide-react"
@@ -21,7 +22,13 @@ const badgeColors = {
   uitverkocht: "bg-foreground/40 text-white",
 }
 
-const strengthLabels = ["", "Mild", "Licht", "Gemiddeld", "Krachtig", "Extreem"]
+// Curated Unsplash images per category
+const categoryImages: Record<string, string> = {
+  truffels: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400&q=75",
+  growkits: "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?w=400&q=75",
+  microdosering: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&q=75",
+  accessoires: "https://images.unsplash.com/photo-1585670286880-4e6f78e7d8a0?w=400&q=75",
+}
 
 interface ProductCardProps {
   product: Product
@@ -41,6 +48,8 @@ export function ProductCard({ product }: ProductCardProps) {
     })
   }
 
+  const imgSrc = categoryImages[product.category]
+
   return (
     <Link href={`/products/${product.slug}`}>
       <motion.div
@@ -49,7 +58,15 @@ export function ProductCard({ product }: ProductCardProps) {
         className="bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-shadow duration-300 group cursor-pointer"
       >
         {/* Image area */}
-        <div className="relative aspect-square bg-gradient-to-br from-primary/5 to-primary/10 flex items-center justify-center text-6xl">
+        <div className="relative aspect-square overflow-hidden">
+          <Image
+            src={imgSrc}
+            alt={product.name}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
           {product.badge && (
             <span
               className={`absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full ${badgeColors[product.badge]}`}
@@ -57,7 +74,6 @@ export function ProductCard({ product }: ProductCardProps) {
               {badgeLabels[product.badge]}
             </span>
           )}
-          {product.emoji}
         </div>
 
         {/* Content */}
@@ -77,20 +93,13 @@ export function ProductCard({ product }: ProductCardProps) {
 
           {/* Strength indicator */}
           {product.strength && (
-            <div className="flex items-center gap-1.5 mb-3">
-              <div className="flex gap-0.5">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <div
-                    key={i}
-                    className={`h-1.5 w-4 rounded-full ${
-                      i <= product.strength! ? "bg-primary" : "bg-primary/15"
-                    }`}
-                  />
-                ))}
-              </div>
-              <span className="text-[10px] text-foreground/40 uppercase tracking-wider">
-                {strengthLabels[product.strength]}
-              </span>
+            <div className="flex gap-0.5 mb-3">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <div
+                  key={i}
+                  className={`h-1 w-4 rounded-full ${i <= product.strength! ? "bg-primary" : "bg-primary/10"}`}
+                />
+              ))}
             </div>
           )}
 
