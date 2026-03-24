@@ -1,26 +1,11 @@
 export type ProductCategory = "truffels" | "growkits" | "microdosering" | "accessoires"
 
-export interface Product {
-  id: string
-  slug: string
-  name: string
-  category: ProductCategory
-  price: number // eurocenten
-  compareAtPrice?: number
-  images: string[]
-  description: string
-  shortDescription: string
-  stock: number
-  ageRestricted: boolean
-  featured: boolean
-  tags: string[]
-  weight?: number // gram
-  strain?: string
-}
-
 export interface CartItem {
-  product: Product
+  id: string
+  name: string
+  price: number // eurocenten
   quantity: number
+  image: string // emoji
 }
 
 export interface Cart {

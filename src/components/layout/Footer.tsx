@@ -11,12 +11,14 @@ const footerLinks = {
   Info: [
     { href: "/about", label: "Over Ons" },
     { href: "/blog", label: "Kennisbank" },
+    { href: "/faq", label: "FAQ" },
     { href: "/contact", label: "Contact" },
   ],
   Legal: [
-    { href: "/legal/privacy", label: "Privacybeleid" },
-    { href: "/legal/terms", label: "Algemene Voorwaarden" },
-    { href: "/legal/disclaimer", label: "Disclaimer" },
+    { href: "/privacy", label: "Privacybeleid" },
+    { href: "/terms", label: "Algemene Voorwaarden" },
+    { href: "/disclaimer", label: "Disclaimer" },
+    { href: "/cookies", label: "Cookiebeleid" },
   ],
 }
 
