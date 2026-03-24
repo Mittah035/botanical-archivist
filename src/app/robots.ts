@@ -1,0 +1,17 @@
+import { MetadataRoute } from "next"
+
+const BASE_URL = "https://botanical-archivist.vercel.app"
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/cart", "/checkout", "/order-success", "/account", "/api/"],
+      },
+    ],
+    sitemap: `${BASE_URL}/sitemap.xml`,
+    host: BASE_URL,
+  }
+}
