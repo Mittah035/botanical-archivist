@@ -28,7 +28,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-xs uppercase tracking-[0.25em] text-secondary font-medium mb-6 block"
+          className="text-xs uppercase tracking-[0.25em] text-emerald-400 font-medium mb-6 block"
         >
           The Botanical Archivist
         </motion.span>
@@ -37,17 +37,17 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="font-display text-5xl md:text-7xl font-extrabold text-primary leading-[1.05] tracking-tight mb-8"
+          className="font-display text-5xl md:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-8"
         >
           Cultivating <br />
-          <span className="text-primary-container">Clarity.</span>
+          <span className="text-emerald-400">Clarity.</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="text-foreground/60 text-lg md:text-xl mb-10 max-w-lg leading-relaxed"
+          className="text-white/80 text-lg md:text-xl mb-10 max-w-lg leading-relaxed"
         >
           Een gecureerd archief van premium mycologische tools en microdoseer
           kits, ontworpen voor de bewuste ontdekkingsreiziger. Geworteld in
@@ -74,7 +74,7 @@ export function HeroSection() {
             asChild
             variant="outline"
             size="lg"
-            className="border-primary/20 text-primary hover:bg-primary/5 rounded-xl px-8 py-4 font-semibold"
+            className="border-white/40 text-white hover:bg-white/10 rounded-xl px-8 py-4 font-semibold"
           >
             <Link href="/blog">Educatieve Gids</Link>
           </Button>
