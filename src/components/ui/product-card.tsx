@@ -25,6 +25,7 @@ const badgeColors = {
 // Per-product lokale afbeeldingen (public/images/products/...)
 const productImages: Record<string, string> = {
   "golden-teacher-growkit": "/images/products/growkits/golden-teacher.jpg",
+  "microdose-starter-kit": "/images/products/microdosering/starter-kit.jpg",
 }
 
 // Fallback Unsplash images per category

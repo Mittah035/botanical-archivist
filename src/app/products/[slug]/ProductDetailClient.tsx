@@ -24,7 +24,7 @@ const productImages: Record<string, string> = {
   "b-plus-growkit": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=900&q=85",
   "ecuador-growkit": "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=900&q=85",
   "mckennaii-growkit": "https://images.unsplash.com/photo-1542601906897-edc9d08c7283?w=900&q=85",
-  "microdose-starter-kit": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=900&q=85",
+  "microdose-starter-kit": "/images/products/microdosering/starter-kit.jpg",
   "microdose-focus-blend": "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?w=900&q=85",
   "microdose-evening-blend": "https://images.unsplash.com/photo-1476136236990-838240be4859?w=900&q=85",
   "microdose-journal": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=900&q=85",
