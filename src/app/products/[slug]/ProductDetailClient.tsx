@@ -20,7 +20,7 @@ const productImages: Record<string, string> = {
   "mokum-truffels": "https://images.unsplash.com/photo-1444492417251-9c84a5fa18e0?w=900&q=85",
   "tampanensis-truffels": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=900&q=85",
   "mexicana-truffels": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=900&q=85",
-  "golden-teacher-growkit": "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?w=900&q=85",
+  "golden-teacher-growkit": "/images/products/growkits/golden-teacher.jpg",
   "b-plus-growkit": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=900&q=85",
   "ecuador-growkit": "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=900&q=85",
   "mckennaii-growkit": "https://images.unsplash.com/photo-1542601906897-edc9d08c7283?w=900&q=85",
