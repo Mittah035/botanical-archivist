@@ -22,7 +22,12 @@ const badgeColors = {
   uitverkocht: "bg-foreground/40 text-white",
 }
 
-// Curated Unsplash images per category
+// Per-product lokale afbeeldingen (public/images/products/...)
+const productImages: Record<string, string> = {
+  "golden-teacher-growkit": "/images/products/growkits/golden-teacher.jpg",
+}
+
+// Fallback Unsplash images per category
 const categoryImages: Record<string, string> = {
   truffels: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400&q=75",
   growkits: "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?w=400&q=75",
@@ -48,7 +53,7 @@ export function ProductCard({ product }: ProductCardProps) {
     })
   }
 
-  const imgSrc = categoryImages[product.category]
+  const imgSrc = productImages[product.slug] ?? categoryImages[product.category]
 
   return (
     <Link href={`/products/${product.slug}`}>
