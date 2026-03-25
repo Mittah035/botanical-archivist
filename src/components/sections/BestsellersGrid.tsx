@@ -39,7 +39,7 @@ export function BestsellersGrid() {
             <div className="bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row h-full shadow-card hover:shadow-elevated transition-shadow duration-300">
               <div className="md:w-3/5 overflow-hidden relative h-64 md:h-auto">
                 <Image
-                  src="https://images.unsplash.com/photo-1604143042226-d02c2c29d91e?w=800&q=80"
+                  src="https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?w=800&q=80"
                   alt="Microdose starter kit — Botanical Archivist"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
