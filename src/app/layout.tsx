@@ -4,6 +4,7 @@ import "./globals.css"
 import { Navbar } from "@/components/layout/Navbar"
 import { Footer } from "@/components/layout/Footer"
 import { AgeVerification } from "@/components/ui/age-verification"
+import { FloatingWidget } from "@/components/ui/floating-widget"
 
 const inter = Inter({
   variable: "--font-inter",
@@ -58,6 +59,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1 pt-16">{children}</main>
         <Footer />
+        <FloatingWidget />
       </body>
     </html>
   )
