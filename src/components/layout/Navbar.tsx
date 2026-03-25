@@ -61,6 +61,12 @@ export function Navbar() {
           {/* Center: Logo */}
           <Link
             href="/"
+            onClick={(e) => {
+              if (window.location.pathname === "/") {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: "smooth" })
+              }
+            }}
             className="text-base font-black text-primary uppercase tracking-[0.2em] font-display hover:opacity-80 transition-opacity"
           >
             Magicmushies

@@ -71,14 +71,14 @@ export default function ProductsPage({
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#c1ecd4] mb-3 block font-medium">
-              Het Archief
+              Ons aanbod
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-extrabold mb-4">
               Alle Producten
             </h1>
             <p className="text-white/60 max-w-xl text-base">
-              Lab-geteste truffels, complete growkits en gestandaardiseerde
-              microdoseer producten — nauwkeurig geselecteerd voor de moderne psychonaut.
+              Verse truffels, growkits en microdoseer producten — getest door
+              Europese laboratoria en discreet bezorgd in heel Nederland en België.
             </p>
           </FadeIn>
         </div>

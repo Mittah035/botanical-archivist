@@ -33,8 +33,8 @@ export function Footer() {
               Magicmushies
             </p>
             <p className="text-sm leading-relaxed text-white/60 max-w-xs">
-              Premium mycologische specimens en professionele groeisets voor de
-              moderne archivist. Wetenschap-gedreven, aarde-gegroeid.
+              Veilige, legale truffels en microdoseer producten — getest in
+              Europese laboratoria en discreet aan je deur bezorgd.
             </p>
           </div>
 
@@ -64,7 +64,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
           <p>© 2026 Magicmushies. Alle rechten voorbehouden.</p>
-          <p>Truffels zijn legaal in Nederland. Alleen voor 18+.</p>
+          <p>Verse truffels zijn 100% legaal in Nederland. Alleen voor 18+. Niet geschikt bij zwangerschap of medicijngebruik.</p>
         </div>
       </div>
     </footer>

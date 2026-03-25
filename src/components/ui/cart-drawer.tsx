@@ -114,7 +114,7 @@ export function CartDrawer({ open, onClose }: CartDrawerProps) {
                 </div>
                 {getTotal() < 5000 && (
                   <p className="text-xs text-foreground/40 text-center">
-                    Nog {formatPrice(5000 - getTotal())} voor gratis verzending
+                    Nog {formatPrice(5000 - getTotal())} besteden voor gratis verzending 🚚
                   </p>
                 )}
                 <Link href="/checkout" onClick={onClose}>

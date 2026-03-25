@@ -6,35 +6,35 @@ import { Leaf, Shield, FlaskConical, Heart } from "lucide-react"
 const values = [
   {
     icon: Leaf,
-    title: "100% Legaal & Natuurlijk",
-    desc: "Wij werken uitsluitend met verse, onverwerkte psilocybine truffels — legaal in Nederland onder de huidige wetgeving. Geen gedroogde producten, geen extracten.",
+    title: "100% Legaal & Vers",
+    desc: "Wij verkopen uitsluitend verse psilocybine truffels — volledig legaal in Nederland. Geen gedroogde producten, geen extracten. Altijd vers, altijd betrouwbaar.",
   },
   {
     icon: FlaskConical,
-    title: "Lab-getest & Gekalibreerd",
-    desc: "Elk product wordt getest door gecertificeerde Europese laboratoria op potentie, zuiverheid en veiligheid. Batch-certificaten beschikbaar op aanvraag.",
+    title: "Getest door onafhankelijke laboratoria",
+    desc: "Elk product wordt door gecertificeerde Europese laboratoria gecontroleerd op psilocybine-gehalte, zuiverheid en veiligheid. Batch-certificaten zijn beschikbaar op aanvraag.",
   },
   {
     icon: Shield,
-    title: "Veiligheid Voorop",
-    desc: "Wij informeren klanten over veilig gebruik, set & setting, en integratie. Ons team staat klaar met evidence-based harm reduction informatie.",
+    title: "Jouw veiligheid staat voorop",
+    desc: "We geven je eerlijke informatie over veilig gebruik, dosering en set & setting. Ons team staat klaar om je te helpen — ook bij twijfel.",
   },
   {
     icon: Heart,
-    title: "Community & Educatie",
-    desc: "Magicmushies is meer dan een webshop. We bouwen een educatieve community rond verantwoord psychedelisch gebruik en persoonlijke groei.",
+    title: "Educatie, niet alleen verkoop",
+    desc: "We helpen je begrijpen wat je koopt en hoe je het verantwoord gebruikt. Onze kennisbank, gidsen en FAQ zijn gratis beschikbaar voor iedereen.",
   },
 ]
 
 const team = [
-  { name: "Archivaris", role: "Mycologie & Kwaliteitscontrole", emoji: "🍄" },
-  { name: "Alchemist", role: "Lab & Productontwikkeling", emoji: "⚗️" },
-  { name: "Gids", role: "Harm Reduction & Educatie", emoji: "🧭" },
+  { name: "Kwaliteitscontrole", role: "Mycologie & productselectie", emoji: "🍄" },
+  { name: "Laboratorium", role: "Testing & productontwikkeling", emoji: "⚗️" },
+  { name: "Klantbegeleiding", role: "Veilig gebruik & harm reduction", emoji: "🧭" },
 ]
 
 export const metadata = {
   title: "Over Ons — Magicmushies",
-  description: "Leer meer over Magicmushies — ons verhaal, onze waarden en onze toewijding aan veilige, legale en kwalitatieve psilocybine producten.",
+  description: "Wie zijn wij? Lees ons verhaal, onze waarden en waarom meer dan 2.400 klanten bij ons bestellen.",
 }
 
 export default function AboutPage() {
@@ -48,13 +48,13 @@ export default function AboutPage() {
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#c1ecd4] mb-4 block font-medium">
               Ons Verhaal
             </span>
-            <h1 className="font-display text-4xl md:text-6xl font-extrabold mb-6 italic leading-tight">
-              Het Archief van de Natuur
+            <h1 className="font-display text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+              Wie zijn wij?
             </h1>
             <p className="text-white/70 text-lg max-w-2xl leading-relaxed">
-              Magicmushies werd geboren uit een eenvoudige overtuiging: dat de
-              krachtigste medicinale stoffen die de natuur ons geeft, toegankelijk
-              moeten zijn op een veilige, educatieve en legale manier.
+              Magicmushies is opgericht vanuit één doel: mensen toegang geven tot
+              veilige, legale en hoogwaardige psilocybine producten — met de
+              informatie die je nodig hebt om ze verantwoord te gebruiken.
             </p>
           </FadeIn>
         </div>
@@ -76,20 +76,20 @@ export default function AboutPage() {
               </div>
               <div>
                 <h2 className="font-display text-2xl font-bold text-primary mb-4">
-                  Waarom Magicmushies?
+                  Waarom kiezen klanten voor Magicmushies?
                 </h2>
                 <p className="text-foreground/70 leading-relaxed mb-4">
-                  In een markt vol anonieme webshops misten wij iets: een merk dat serieus
-                  omgaat met educatie, kwaliteit en de unieke wetgeving in Nederland.
+                  In de meeste webshops bestel je anoniem — zonder te weten wat je
+                  precies krijgt, en zonder hulp als je vragen hebt. Wij doen het anders.
                 </p>
                 <p className="text-foreground/70 leading-relaxed mb-4">
-                  Psilocybine truffels zijn legaal in Nederland en wetenschappelijk steeds
-                  beter onderbouwd als middel voor mentale gezondheid. Toch ontbreekt
-                  vaak kwalitatieve informatie en betrouwbare producten.
+                  Psilocybine truffels zijn volledig legaal in Nederland en worden steeds
+                  meer erkend als middel voor mentale gezondheid. Toch is goede informatie
+                  schaars. Wij vullen die gap: eerlijk, duidelijk en veilig.
                 </p>
                 <p className="text-foreground/70 leading-relaxed">
-                  Wij archiveren de beste soorten, protocollen en kennis — voor de
-                  recreatieve gebruiker én de serieuze onderzoeker.
+                  Van beginners tot gevorderden — we helpen je het goede product te kiezen
+                  en zorgen dat je weet hoe je het veilig en verantwoord gebruikt.
                 </p>
               </div>
             </div>
@@ -123,8 +123,8 @@ export default function AboutPage() {
       <section className="py-20 px-6 md:px-20">
         <div className="max-w-4xl mx-auto">
           <FadeIn className="mb-12 text-center">
-            <h2 className="font-display text-3xl font-bold text-primary mb-2">Het Team</h2>
-            <p className="text-foreground/60">Gedreven door nieuwsgierigheid, kennis en verantwoordelijkheid.</p>
+            <h2 className="font-display text-3xl font-bold text-primary mb-2">Ons Team</h2>
+            <p className="text-foreground/60">Gedreven door kennis, nieuwsgierigheid en verantwoordelijkheid.</p>
           </FadeIn>
           <StaggerChildren className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {team.map((member) => (
@@ -150,9 +150,9 @@ export default function AboutPage() {
             <div>
               <p className="text-sm font-bold text-amber-800 mb-1">Wettelijke Verklaring</p>
               <p className="text-xs text-amber-700 leading-relaxed">
-                Magicmushies verkoopt uitsluitend verse psilocybine truffels die legaal zijn
-                in Nederland. Verkoop is voorbehouden aan personen van 18+. Wij verkopen niet aan
-                personen in landen waar het bezit strafbaar is. Lees onze volledige disclaimer voor meer informatie.
+                Magicmushies verkoopt uitsluitend verse psilocybine truffels die volledig legaal zijn in Nederland.
+                Onze producten zijn alleen bestemd voor personen van 18 jaar en ouder. Wij leveren niet aan
+                landen waar het bezit van psilocybine strafbaar is. Raadpleeg altijd onze <a href="/disclaimer" className="underline">volledige disclaimer</a> voor meer informatie.
               </p>
             </div>
           </div>

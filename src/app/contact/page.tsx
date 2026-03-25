@@ -10,19 +10,19 @@ const contactInfo = [
     icon: Mail,
     title: "E-mail",
     value: "info@magicmushies.nl",
-    desc: "Reactie binnen 1 werkdag",
+    desc: "We reageren binnen 1 werkdag",
   },
   {
     icon: Clock,
-    title: "Openingstijden",
+    title: "Bereikbaar",
     value: "Ma–Vr 09:00–17:00",
     desc: "Gesloten op feestdagen",
   },
   {
     icon: Shield,
-    title: "Veilig & Discreet",
-    value: "Vertrouwelijk contact",
-    desc: "Wij behandelen uw vragen met respect",
+    title: "Vertrouwelijk",
+    value: "Discreet & veilig",
+    desc: "We behandelen je bericht met volledige vertrouwelijkheid",
   },
 ]
 
@@ -52,10 +52,10 @@ export default function ContactPage() {
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#c1ecd4] mb-3 block font-medium">
               Contact
             </span>
-            <h1 className="font-display text-4xl font-extrabold mb-3">Neem Contact Op</h1>
+            <h1 className="font-display text-4xl font-extrabold mb-3">Hoe kunnen we je helpen?</h1>
             <p className="text-white/60 max-w-xl">
-              Vragen over producten, bestellingen of veilig gebruik? Ons team staat
-              klaar om je te helpen.
+              Vragen over een product, je bestelling of veilig gebruik? Stuur ons
+              een bericht — we reageren altijd binnen één werkdag.
             </p>
           </FadeIn>
         </div>
@@ -81,10 +81,10 @@ export default function ContactPage() {
             <FadeIn delay={0.3}>
               <div className="bg-primary/5 rounded-2xl p-5 border border-primary/10">
                 <MessageSquare className="w-5 h-5 text-primary mb-2" />
-                <p className="text-sm font-bold text-primary mb-1">Harm Reduction</p>
+                <p className="text-sm font-bold text-primary mb-1">Slechte ervaring gehad?</p>
                 <p className="text-xs text-foreground/60 leading-relaxed">
-                  Heb je een moeilijke ervaring of vragen over veilig gebruik? We
-                  verbinden je met erkende harm reduction professionals.
+                  Heb je een moeilijke ervaring gehad of twijfel je over veilig gebruik?
+                  We koppelen je gratis aan erkende harm reduction professionals in Nederland.
                 </p>
               </div>
             </FadeIn>

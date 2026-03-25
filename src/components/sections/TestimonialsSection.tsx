@@ -62,10 +62,10 @@ export function TestimonialsSection() {
       <div className="max-w-7xl mx-auto">
         <FadeIn className="mb-16">
           <span className="text-[10px] uppercase tracking-[0.25em] text-secondary font-medium mb-2 block">
-            Klanten Aan Het Woord
+            Ervaringen
           </span>
           <h2 className="font-display text-3xl font-bold text-primary">
-            Wat Onze Klanten Zeggen
+            Dit zeggen onze klanten
           </h2>
         </FadeIn>
 

@@ -4,10 +4,10 @@ import { motion } from "framer-motion"
 import { ShieldCheck, Truck, FlaskConical, Leaf } from "lucide-react"
 
 const badges = [
-  { icon: ShieldCheck, label: "EU Gecertificeerd Laboratorium" },
-  { icon: Truck, label: "Discrete Internationale Verzending" },
-  { icon: FlaskConical, label: "Zuiverheid Getest per Batch" },
-  { icon: Leaf, label: "100% Biologische Substraten" },
+  { icon: ShieldCheck, label: "EU Lab-getest & Gecertificeerd" },
+  { icon: Truck, label: "Discreet bezorgd — geen herkenbare verpakking" },
+  { icon: FlaskConical, label: "Elke batch getest op zuiverheid & potentie" },
+  { icon: Leaf, label: "100% Vers, biologisch & natuurlijk" },
 ]
 
 export function TrustBadges() {

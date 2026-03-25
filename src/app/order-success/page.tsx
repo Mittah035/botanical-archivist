@@ -10,24 +10,24 @@ export default function OrderSuccessPage() {
             <CheckCircle className="w-8 h-8 text-green-500" />
           </div>
           <h1 className="font-display text-2xl font-bold text-primary mb-2">
-            Bestelling geplaatst!
+            Gelukt — je bestelling is ontvangen!
           </h1>
           <p className="text-foreground/60 text-sm mb-8">
-            Dank je voor je bestelling bij Magicmushies. Je ontvangt een
-            bevestiging per e-mail met je ordernummer en track & trace code.
+            Bedankt voor je bestelling. Je ontvangt zo meteen een bevestiging
+            per e-mail met je ordernummer en een track & trace link zodra het pakket onderweg is.
           </p>
 
           <div className="space-y-3 mb-8 text-left">
             {[
               {
                 icon: Mail,
-                title: "Bevestigingsmail verstuurd",
-                desc: "Check je inbox (en spam) voor je ordernummer.",
+                title: "Bevestiging onderweg naar je inbox",
+                desc: "Niets ontvangen? Check ook je spam-map.",
               },
               {
                 icon: Package,
-                title: "Discreet verpakt",
-                desc: "Je bestelling wordt neutraal en discreet verpakt verstuurd.",
+                title: "Discreet verpakt & verzonden",
+                desc: "Geen logo's, geen productvermelding — gewoon een neutrale bruine doos.",
               },
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="flex gap-3 bg-surface-low rounded-xl p-3">

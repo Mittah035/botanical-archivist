@@ -10,19 +10,19 @@ const faqs = [
     items: [
       {
         q: "Zijn psilocybine truffels legaal in Nederland?",
-        a: "Ja. Verse psilocybine truffels (sclerotia) zijn volledig legaal in Nederland en vallen niet onder de Opiumwet. Gedroogde paddenstoelen zijn echter verboden. Wij verkopen uitsluitend vers product.",
+        a: "Ja, volledig legaal. Verse psilocybine truffels (ook wel sclerotia) vallen niet onder de Opiumwet en zijn vrij te kopen en te gebruiken in Nederland. Let op: gedroogde paddenstoelen zijn wél verboden. Wij verkopen uitsluitend vers product.",
       },
       {
-        q: "Hoe worden jullie producten getest?",
-        a: "Elk product wordt door gecertificeerde Europese laboratoria getest op psilocybine-concentratie, zuiverheid en de afwezigheid van schadelijke stoffen. Batch-certificaten zijn beschikbaar op aanvraag.",
+        q: "Hoe weet ik dat jullie producten veilig zijn?",
+        a: "Elk product wordt getest door onafhankelijke, gecertificeerde Europese laboratoria op psilocybine-gehalte, zuiverheid en eventuele schadelijke stoffen. Je kunt het batch-certificaat van je product altijd opvragen via info@magicmushies.nl.",
       },
       {
-        q: "Wat is het verschil tussen truffelsoorten?",
-        a: "Truffels variëren in potentie (sterkte) en effect. Mexicana is mild en geschikt voor beginners. Atlantis is medium. Hollandia en Valhalla zijn de krachtigste soorten. Bekijk onze producten voor gedetailleerde beschrijvingen.",
+        q: "Wat is het verschil tussen de truffelsoorten?",
+        a: "De soorten verschillen in sterkte (potentie) en effect. Mexicana is de mildste soort — ideaal als je voor het eerst truffels probeert. Atlantis zit in het midden. Hollandia en Valhalla zijn de sterkste soorten en alleen geschikt voor mensen met ervaring. Op elke productpagina vind je een duidelijke sterktemeter.",
       },
       {
         q: "Hoe lang zijn truffels houdbaar?",
-        a: "Verse truffels zijn ongeopend 2-3 maanden houdbaar in de koelkast (2-4°C). Na opening consumeer je ze het beste binnen 1-2 maanden.",
+        a: "Ongeopend zijn verse truffels 2 tot 3 maanden houdbaar in de koelkast (2–4°C). Eenmaal geopend kun je ze het beste binnen 1 à 2 maanden opgebruiken.",
       },
     ],
   },
@@ -30,20 +30,20 @@ const faqs = [
     category: "Bestellen & Bezorging",
     items: [
       {
-        q: "Hoe snel ontvang ik mijn bestelling?",
-        a: "Bestellingen geplaatst voor 14:00 worden dezelfde dag verwerkt en bezorgd binnen 1-3 werkdagen via PostNL.",
+        q: "Wanneer ontvang ik mijn bestelling?",
+        a: "Bestel je voor 14:00 uur? Dan wordt je pakket dezelfde dag verzonden via PostNL en ontvang je het binnen 1 tot 3 werkdagen. Je ontvangt een track & trace code zodra je pakket onderweg is.",
       },
       {
-        q: "Is de verpakking discreet?",
-        a: "Absoluut. Wij verzenden in neutraal bruine kartonnen dozen zonder vermelding van de inhoud. De afzender op het pakket is een neutrale code — niet herkenbaar als drugswinkel.",
+        q: "Is de verpakking echt discreet?",
+        a: "Ja, altijd. We verzenden in neutrale bruine dozen zonder enige vermelding van de inhoud. De afzender op het pakket is een anonieme code — er staat niets op wat verwijst naar onze winkel of het product.",
       },
       {
         q: "Kan ik ook afhalen?",
-        a: "Wij zijn uitsluitend een online webshop en bieden geen afhaalopties aan.",
+        a: "Nee, wij zijn een puur online winkel en bieden geen afhaaloptie aan.",
       },
       {
         q: "Wat zijn de verzendkosten?",
-        a: "€4,50 standaard. Gratis bij bestellingen boven €50,00. Bezorging alleen in Nederland en België.",
+        a: "De standaard verzendkosten zijn €4,50. Bij bestellingen van €50 of meer is de verzending gratis. We bezorgen in Nederland en België.",
       },
     ],
   },
@@ -51,37 +51,37 @@ const faqs = [
     category: "Veiligheid & Gebruik",
     items: [
       {
-        q: "Mag ik truffels gebruiken als ik antidepressiva neem?",
-        a: "Nee. Psilocybine combineren met SSRI's, MAOI's of lithium is gevaarlijk. Raadpleeg altijd een arts. SSRI's verminderen ook de werking van psilocybine significant.",
+        q: "Kan ik truffels gebruiken als ik antidepressiva slik?",
+        a: "Nee. Het combineren van psilocybine met SSRI's, MAOI's of lithium is gevaarlijk en kan ernstige bijwerkingen veroorzaken. Raadpleeg altijd een arts als je medicijnen gebruikt. Houd er ook rekening mee dat SSRI's de werking van psilocybine sterk verminderen.",
       },
       {
-        q: "Wat is een veilige startdosis?",
-        a: "Voor beginners: 5-7g truffels in een vertrouwde omgeving. Microdosering: 0.1-0.3g. Begin altijd laag en verhoog pas bij een volgende ervaring.",
+        q: "Hoeveel moet ik nemen als beginner?",
+        a: "Begin laag. Voor een lichte eerste ervaring: 5–7g truffels in een veilige, bekende omgeving. Voor microdosering: start met 0.1g. Verhoog de dosis nooit tijdens dezelfde sessie — probeer een hogere dosis pas bij een volgende keer.",
       },
       {
         q: "Kan ik verslaafd raken aan psilocybine?",
-        a: "Psilocybine heeft een laag verslavingspotentieel en creëert geen fysieke afhankelijkheid. Tolerantie bouwt snel op, waardoor dagelijks gebruik zichzelf 'bestraft'. Psychologische afhankelijkheid is theoretisch mogelijk maar zeldzaam.",
+        a: "Nee, psilocybine veroorzaakt geen fysieke afhankelijkheid. Je bouwt ook snel tolerantie op, waardoor dagelijks gebruik geen zin heeft. Psychologische afhankelijkheid is theoretisch mogelijk maar wordt in de praktijk zelden gerapporteerd.",
       },
       {
-        q: "Wat doe ik bij een moeilijke ervaring?",
-        a: "Verplaats je naar een veilige, rustige omgeving. Lig down, haal diep adem, en vertrouw dat de effecten voorbijgaan. Heb een nuchter vertrouwenspersoon beschikbaar. Bel 112 bij medische nood.",
+        q: "Wat doe ik als de ervaring te intensief wordt?",
+        a: "Ga naar een rustige, veilige plek en ga liggen. Haal langzaam en diep adem. Onthoud: de effecten zijn tijdelijk en gaan vanzelf over. Zorg altijd voor een nuchter iemand die je vertrouwt in de buurt. Bij een medische noodsituatie bel je 112.",
       },
     ],
   },
   {
-    category: "Betaling & Account",
+    category: "Betaling & Retour",
     items: [
       {
         q: "Welke betaalmethoden accepteren jullie?",
-        a: "iDEAL en creditcard (Visa/Mastercard) via Mollie. Alle betalingen zijn beveiligd met SSL en PCI DSS compliant.",
+        a: "Je kunt betalen via iDEAL of creditcard (Visa / Mastercard) via ons betaalplatform Mollie. Alle betalingen zijn SSL-beveiligd en PCI DSS-gecertificeerd.",
       },
       {
-        q: "Kan ik een bestelling annuleren?",
-        a: "Bestellingen kunnen worden geannuleerd zolang ze nog niet zijn verzonden. Neem direct contact op via info@magicmushies.nl met je ordernummer.",
+        q: "Kan ik mijn bestelling annuleren of retourneren?",
+        a: "Je kunt een bestelling annuleren zolang die nog niet is verzonden. Stuur ons zo snel mogelijk een bericht via info@magicmushies.nl met je ordernummer. Vanwege de versheid van de producten accepteren we geen retourzendingen na levering.",
       },
       {
         q: "Hebben jullie een loyaliteitsprogramma?",
-        a: "Nog niet, maar het staat op de roadmap. Meld je aan voor onze nieuwsbrief om als eerste op de hoogte te zijn.",
+        a: "Nog niet, maar we werken eraan. Schrijf je in voor onze nieuwsbrief en je bent de eerste die het weet zodra we iets lanceeren.",
       },
     ],
   },
@@ -95,9 +95,9 @@ export default function FAQPage() {
       <section className="bg-primary text-white py-16 px-6 md:px-20">
         <div className="max-w-4xl mx-auto">
           <FadeIn>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-[#c1ecd4] mb-3 block font-medium">Support</span>
-            <h1 className="font-display text-4xl font-extrabold mb-3">Veelgestelde Vragen</h1>
-            <p className="text-white/60">Alle antwoorden op je vragen over producten, bestellen, veiligheid en meer.</p>
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#c1ecd4] mb-3 block font-medium">Hulp nodig?</span>
+            <h1 className="font-display text-4xl font-extrabold mb-3">Veelgestelde vragen</h1>
+            <p className="text-white/60">Snel antwoord op vragen over onze producten, bezorging, veilig gebruik en betaling. Staat jouw vraag er niet bij? Mail ons via info@magicmushies.nl.</p>
           </FadeIn>
         </div>
       </section>

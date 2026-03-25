@@ -17,17 +17,17 @@ export function BestsellersGrid() {
         <FadeIn className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
           <div>
             <span className="text-[10px] uppercase tracking-[0.25em] text-secondary font-medium mb-2 block">
-              Curation 01
+              Meest gekozen
             </span>
             <h2 className="font-display text-3xl font-bold text-primary">
-              Archivale Bestsellers
+              Onze Bestsellers
             </h2>
           </div>
           <Link
             href="/products"
             className="text-sm text-primary font-semibold border-b border-primary/20 hover:border-primary transition-all pb-1 flex items-center gap-1"
           >
-            Bekijk alle variëteiten
+            Bekijk alle producten
             <ArrowRight className="w-4 h-4" />
           </Link>
         </FadeIn>
@@ -61,8 +61,8 @@ export function BestsellersGrid() {
                     Microdose Starter Kit
                   </h3>
                   <p className="text-foreground/60 text-sm leading-relaxed mb-6">
-                    30-daags Fadiman protocol. Alles wat je nodig hebt om te beginnen
-                    met verantwoord microdoseren. Lab-getest, gecalibreerd.
+                    Meer focus en een betere stemming in 30 dagen. Alles inbegrepen:
+                    capsules, protocol en dagboek. Lab-getest en direct klaar voor gebruik.
                   </p>
                 </div>
                 <Button
@@ -132,17 +132,17 @@ export function BestsellersGrid() {
                 Educatieve Gids
               </span>
               <h3 className="font-display text-2xl font-bold mb-4 text-primary">
-                Nieuw bij mycologie?
+                Eerste keer? Begin hier.
               </h3>
               <p className="text-foreground/60 mb-6 leading-relaxed text-sm">
-                Lees onze complete beginnersgids over veiligheid, dosering,
-                set & setting en het Fadiman microdoseer protocol.
+                Onze gratis beginnersgids legt alles uit: dosering, veiligheid,
+                set & setting en hoe je het Fadiman microdoseer protocol volgt.
               </p>
               <Link
                 href="/blog/wat-zijn-psilocybine-truffels"
                 className="flex items-center gap-2 text-primary font-bold text-sm group w-fit"
               >
-                Lees de Gids
+                Lees de gratis gids
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

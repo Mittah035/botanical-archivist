@@ -14,9 +14,16 @@ export function NewsletterSection() {
     e.preventDefault()
     if (!email) return
     setLoading(true)
-    await new Promise((r) => setTimeout(r, 800))
-    setSubscribed(true)
-    setLoading(false)
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      })
+      if (res.ok) setSubscribed(true)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -27,11 +34,11 @@ export function NewsletterSection() {
             <Mail className="w-7 h-7 text-primary" />
           </div>
           <h2 className="font-display text-3xl font-bold text-primary mb-3">
-            Het Archief Nieuwsbrief
+            Blijf op de hoogte
           </h2>
           <p className="text-foreground/60 mb-8 leading-relaxed">
-            Ontvang als eerste nieuwe producten, seizoensaanbiedingen, en
-            educatieve guides over veilig gebruik — maximaal 2x per maand.
+            Ontvang als eerste nieuwe producten, kortingsacties en praktische
+            gidsen over veilig gebruik. Maximaal 2 e-mails per maand — geen spam.
           </p>
 
           {subscribed ? (
@@ -41,7 +48,7 @@ export function NewsletterSection() {
               className="flex items-center justify-center gap-3 text-green-600 bg-green-50 rounded-2xl p-5"
             >
               <CheckCircle className="w-5 h-5" />
-              <span className="font-medium">Aangemeld! Welkom in het archief.</span>
+              <span className="font-medium">Gelukt! Je staat nu op de lijst — welkom.</span>
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="flex gap-3 max-w-md mx-auto">

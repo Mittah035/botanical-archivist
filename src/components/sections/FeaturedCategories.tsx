@@ -10,15 +10,15 @@ const categories = [
   {
     slug: "truffels",
     name: "Truffels",
-    description: "Premium psilocybe specimens, nauwkeurig gewogen en lab-getest.",
+    description: "Verse, lab-geteste truffels in alle sterktes. Vandaag besteld? Morgen in huis.",
     emoji: "🌿",
     bg: "from-primary/5 to-primary-container/15",
-    count: "12 variëteiten",
+    count: "12 soorten",
   },
   {
     slug: "growkits",
     name: "Growkits",
-    description: "Alles wat je nodig hebt om thuis je eigen paddenstoelen te kweken.",
+    description: "Kweek zelf paddenstoelen thuis — eenvoudig, zonder gedoe en gegarandeerd resultaat.",
     emoji: "🧫",
     bg: "from-secondary/10 to-tertiary/10",
     count: "8 kits",
@@ -26,7 +26,7 @@ const categories = [
   {
     slug: "microdosering",
     name: "Microdosering",
-    description: "Gestandaardiseerde protocollen voor dagelijks, sub-perceptueel gebruik.",
+    description: "Meer focus, betere stemming en minder stress — zonder te 'trippen'.",
     emoji: "⚗️",
     bg: "from-tertiary/5 to-secondary/15",
     count: "6 producten",
@@ -34,7 +34,7 @@ const categories = [
   {
     slug: "accessoires",
     name: "Accessoires",
-    description: "Supplementen, boeken en tools ter ondersteuning van je praktijk.",
+    description: "Weegschalen, dagboeken en tools voor een veilige en prettige ervaring.",
     emoji: "📦",
     bg: "from-outline/5 to-surface-container",
     count: "20+ items",
@@ -47,10 +47,10 @@ export function FeaturedCategories() {
       <div className="max-w-7xl mx-auto">
         <FadeIn className="mb-16">
           <span className="text-[10px] uppercase tracking-[0.25em] text-secondary font-medium mb-2 block">
-            Het Archief
+            Wat zoek je?
           </span>
           <h2 className="font-display text-3xl font-bold text-primary">
-            Alle Categorieën
+            Shop per categorie
           </h2>
         </FadeIn>
 

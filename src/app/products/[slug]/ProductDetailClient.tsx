@@ -48,28 +48,28 @@ const categoryConfig = {
     accent: "from-emerald-900 to-primary",
     badge: "text-[#c1ecd4] bg-white/10",
     icon: Sprout,
-    tagline: "Vers geoogst & lab-getest",
+    tagline: "Vers geoogst · Lab-getest · Discreet bezorgd",
     bgOverlay: "from-primary/80 via-primary/40 to-transparent",
   },
   growkits: {
     accent: "from-amber-900 to-amber-700",
     badge: "text-amber-200 bg-amber-900/30",
     icon: Leaf,
-    tagline: "Zelf kweken thuis — complete kit",
+    tagline: "Zelf kweken thuis · Complete kit · Meerdere oogsten",
     bgOverlay: "from-amber-900/70 via-amber-800/30 to-transparent",
   },
   microdosering: {
     accent: "from-indigo-900 to-indigo-700",
     badge: "text-indigo-200 bg-indigo-900/30",
     icon: FlaskConical,
-    tagline: "Wetenschappelijk onderbouwd protocol",
+    tagline: "Bewezen protocol · Lab-getest · Direct klaar voor gebruik",
     bgOverlay: "from-indigo-900/70 via-indigo-800/30 to-transparent",
   },
   accessoires: {
     accent: "from-stone-800 to-stone-600",
     badge: "text-stone-200 bg-stone-800/30",
     icon: Zap,
-    tagline: "Premium tools voor serieuze gebruikers",
+    tagline: "Kwalitatief accessoire voor veilig en nauwkeurig gebruik",
     bgOverlay: "from-stone-900/70 via-stone-800/30 to-transparent",
   },
 }
@@ -77,19 +77,19 @@ const categoryConfig = {
 const faqs = [
   {
     q: "Is dit product legaal in Nederland?",
-    a: "Ja. Verse psilocybine truffels zijn volledig legaal in Nederland. Ze vallen niet onder de Opiumwet. Growkits zijn ook legaal. Gedroogde paddenstoelen zijn NIET legaal.",
+    a: "Ja, volledig legaal. Verse psilocybine truffels vallen niet onder de Opiumwet en zijn vrij te kopen voor mensen van 18+. Growkits zijn ook legaal. Gedroogde paddenstoelen zijn wél verboden — die verkopen wij niet.",
   },
   {
-    q: "Wat is de minimumleeftijd?",
-    a: "Wij verkopen uitsluitend aan personen van 18 jaar of ouder. Bij levering kan een leeftijdsverificatie worden gevraagd.",
+    q: "Wat is de minimumleeftijd om te bestellen?",
+    a: "Je moet minimaal 18 jaar oud zijn om bij ons te bestellen. We controleren de leeftijd bij twijfel en weigeren leveringen aan minderjarigen.",
   },
   {
-    q: "Hoe wordt het product verzonden?",
-    a: "Alle producten worden discreet verpakt. De afzender op het pakket geeft niet de inhoud aan. Verzending via PostNL, 1-3 werkdagen.",
+    q: "Hoe wordt mijn bestelling verpakt en bezorgd?",
+    a: "We versturen altijd in neutrale bruine dozen — geen logo's, geen productvermelding. De afzender is een anonieme code. Bezorging via PostNL binnen 1–3 werkdagen. Gratis bij bestellingen boven €50.",
   },
   {
-    q: "Mag ik het product retourneren?",
-    a: "Vanwege de aard van het product (bederfelijk / persoonlijk gebruik) is retour niet mogelijk. Bij beschadiging of fout neem contact op.",
+    q: "Kan ik het product retourneren?",
+    a: "Vanwege de versheid van de producten is retourneren helaas niet mogelijk. Heb je een beschadigd pakket ontvangen of is er iets misgegaan? Stuur een mail naar info@magicmushies.nl — we lossen het op.",
   },
 ]
 

@@ -13,14 +13,14 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "wat-zijn-psilocybine-truffels",
-    title: "Wat zijn Psilocybine Truffels? De Complete Gids",
+    title: "Wat zijn psilocybine truffels? Alles wat je moet weten",
     excerpt:
-      "Alles wat je moet weten over psilocybine truffels: wat ze zijn, hoe ze werken, de wettelijke status in Nederland en hoe je ze veilig gebruikt.",
+      "Wat zijn truffels precies, hoe werken ze, zijn ze legaal in Nederland en hoe gebruik je ze veilig? De complete beginnersgids.",
     category: "Educatie",
     emoji: "🍄",
     readTime: 8,
     date: "2024-11-15",
-    author: "De Archivaris",
+    author: "Magicmushies Redactie",
     content: `
 ## Wat zijn Psilocybine Truffels?
 
@@ -48,14 +48,14 @@ De ervaring wordt sterk bepaald door je mentale staat (set) en je omgeving (sett
   },
   {
     slug: "microdosering-gids-beginners",
-    title: "Microdosering voor Beginners: Het Fadiman Protocol",
+    title: "Beginnen met microdoseren: zo werkt het Fadiman protocol",
     excerpt:
-      "Het Fadiman protocol is de meest populaire microdoseer methode. Leer hoe je het uitvoert, wat je kunt verwachten en hoe je je voortgang bijhoudt.",
+      "Wil je starten met microdoseren maar weet je niet hoe? Het Fadiman protocol legt je exact uit wanneer je neemt, wanneer je rust en wat je kunt verwachten.",
     category: "Microdosering",
     emoji: "⚗️",
     readTime: 6,
     date: "2024-11-08",
-    author: "De Alchemist",
+    author: "Magicmushies Redactie",
     content: `
 ## Het Fadiman Protocol
 
@@ -83,14 +83,14 @@ Onderzoek suggereert dat microdosering kan bijdragen aan:
   },
   {
     slug: "growkit-handleiding-stap-voor-stap",
-    title: "Je Eerste Growkit: Stap-voor-Stap Handleiding",
+    title: "Jouw eerste growkit: stap voor stap van doos tot oogst",
     excerpt:
-      "Van unboxing tot eerste flush — volledige handleiding voor het kweken van psilocybe paddenstoelen thuis met onze growkits.",
+      "Nog nooit een growkit gebruikt? In deze handleiding leggen we precies uit hoe je hem instelt, laat groeien en oogst — inclusief tips voor een maximale opbrengst.",
     category: "Kweken",
     emoji: "🧫",
     readTime: 10,
     date: "2024-10-28",
-    author: "De Archivaris",
+    author: "Magicmushies Redactie",
     content: `
 ## Wat heb je nodig?
 
@@ -118,14 +118,14 @@ Oogst vlak voordat de sluier onder de hoed breekt. Draai zachtjes terwijl je tre
   },
   {
     slug: "wetgeving-psilocybine-nederland-2024",
-    title: "Wetgeving Psilocybine in Nederland (2024): Wat Mag?",
+    title: "Zijn psilocybine truffels legaal in Nederland? Alles op een rij",
     excerpt:
-      "Een helder overzicht van de Nederlandse wetgeving rondom psilocybine truffels, paddenstoelen en growkits. Wat is legaal, wat niet?",
+      "Verse truffels zijn 100% legaal in Nederland — maar er zijn uitzonderingen. Lees hier precies wat wel en niet mag, inclusief growkits en internationaal gebruik.",
     category: "Wetgeving",
     emoji: "⚖️",
     readTime: 5,
     date: "2024-10-15",
-    author: "De Gids",
+    author: "Magicmushies Redactie",
     content: `
 ## Samenvatting Nederlandse Wetgeving
 
@@ -150,14 +150,14 @@ Truffels uitvoeren naar landen waar psilocybine illegaal is, is strafbaar. Infor
   },
   {
     slug: "set-setting-veilig-gebruik",
-    title: "Set & Setting: Hoe Zorg je voor een Veilige Ervaring?",
+    title: "Set & setting: zo zorg je voor een goede en veilige ervaring",
     excerpt:
-      "De twee meest bepalende factoren voor een positieve psychedelische ervaring. Leer hoe je je mentale staat en omgeving optimaal voorbereidt.",
+      "Hoe je je voelt en waar je bent bepaalt voor een groot deel hoe je ervaring verloopt. Zo bereid je jezelf en je omgeving optimaal voor.",
     category: "Veiligheid",
     emoji: "🧭",
     readTime: 7,
     date: "2024-09-30",
-    author: "De Gids",
+    author: "Magicmushies Redactie",
     content: `
 ## Set: Jouw Mentale Staat
 
@@ -184,14 +184,14 @@ Bij hogere doses is een nuchtere vertrouwenspersoon (trip sitter) sterk aanbevol
   },
   {
     slug: "psilocybine-wetenschap-onderzoek",
-    title: "De Wetenschap Achter Psilocybine: Recente Doorbraken",
+    title: "Wat zegt de wetenschap over psilocybine? De belangrijkste onderzoeken",
     excerpt:
-      "Van Johns Hopkins tot Amsterdam UMC — overzicht van de meest recente wetenschappelijke doorbraken in psilocybine onderzoek voor depressie, angst en verslaving.",
+      "Universiteiten als Johns Hopkins en Amsterdam UMC onderzoeken psilocybine intensief. Dit zijn de meest opvallende resultaten bij depressie, angst en verslaving.",
     category: "Wetenschap",
     emoji: "🔬",
     readTime: 9,
     date: "2024-09-12",
-    author: "De Alchemist",
+    author: "Magicmushies Redactie",
     content: `
 ## Recente Onderzoeksresultaten
 

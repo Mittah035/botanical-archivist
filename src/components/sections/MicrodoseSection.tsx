@@ -6,10 +6,10 @@ import { ArrowRight } from "lucide-react"
 import { FadeIn } from "@/components/animations/FadeIn"
 
 const stats = [
-  { value: "0.1g", label: "Standaard Dosis" },
-  { value: "Fadiman", label: "Goud Protocol" },
-  { value: "30 Dagen", label: "Starter Cyclus" },
-  { value: "EU Lab", label: "Gecertificeerd" },
+  { value: "0.1g", label: "Aanbevolen startdosis" },
+  { value: "Fadiman", label: "Bewezen protocol" },
+  { value: "30 dagen", label: "Volledige starter cyclus" },
+  { value: "EU Lab", label: "Gecertificeerd getest" },
 ]
 
 export function MicrodoseSection() {
@@ -36,21 +36,21 @@ export function MicrodoseSection() {
         {/* Content */}
         <FadeIn direction="left" delay={0.2}>
           <span className="text-[10px] uppercase tracking-[0.3em] text-[#c1ecd4] mb-6 block font-medium">
-            Het Protocol
+            Microdosering
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-extrabold mb-8 leading-tight italic">
-            Voorbij het Oppervlak.
+          <h2 className="font-display text-4xl md:text-5xl font-extrabold mb-8 leading-tight">
+            Beter in je vel, zonder te trippen.
           </h2>
           <div className="space-y-4 text-white/70 text-base md:text-lg leading-relaxed">
             <p>
-              Microdoseren is het innemen van sub-perceptuele doses psilocybine.
-              Het doel is niet om te &ldquo;trippen&rdquo;, maar om cognitieve
-              functies, emotioneel evenwicht en creatieve flow te verbeteren
-              terwijl je je dagelijkse routine bijhoudt.
+              Bij microdosering neem je heel kleine hoeveelheden psilocybine —
+              zo klein dat je geen psychedelische effecten ervaart. Wél merk je
+              meer focus, minder stress en een betere stemming in je dagelijks leven.
             </p>
             <p>
-              Ons archief biedt de meest stabiele, lab-geteste substraten in
-              Europa — wetenschappelijke precisie ontmoet eeuwenoude wijsheid.
+              Onze microdoseer producten zijn gecertificeerd getest in Europese
+              laboratoria en worden geleverd met een duidelijk stappenplan.
+              Perfect voor beginners én mensen met ervaring.
             </p>
           </div>
 
@@ -72,7 +72,7 @@ export function MicrodoseSection() {
             href="/products?category=microdosering"
             className="mt-10 inline-flex items-center gap-2 text-[#c1ecd4] font-bold text-sm group"
           >
-            Ontdek Microdosering
+            Bekijk microdoseer producten
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </FadeIn>
