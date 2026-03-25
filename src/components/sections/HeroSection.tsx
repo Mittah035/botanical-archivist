@@ -10,151 +10,111 @@ import { Button } from "@/components/ui/button"
 gsap.registerPlugin(ScrollTrigger)
 
 export function HeroSection() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
-  const overlayRef = useRef<HTMLDivElement>(null)
-  const contentRef = useRef<HTMLDivElement>(null)
-  const badgeRef = useRef<HTMLSpanElement>(null)
-  const headingRef = useRef<HTMLHeadingElement>(null)
-  const subRef = useRef<HTMLParagraphElement>(null)
-  const ctaRef = useRef<HTMLDivElement>(null)
-  const scrollVideoRef = useRef<HTMLVideoElement>(null)
+  const videoRef    = useRef<HTMLVideoElement>(null)
+  const contentRef  = useRef<HTMLDivElement>(null)
+  const badgeRef    = useRef<HTMLSpanElement>(null)
+  const headingRef  = useRef<HTMLHeadingElement>(null)
+  const subRef      = useRef<HTMLParagraphElement>(null)
+  const ctaRef      = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const container = containerRef.current
-      const video = videoRef.current
-      const scrollVideo = scrollVideoRef.current
+    const video = videoRef.current
+    if (!video) return
 
-      if (!container) return
+    // ── GPU layer voor butter-smooth compositing ────────────────
+    gsap.set(video, { force3D: true, willChange: "transform" })
 
-      // ── Entrance animaties ──────────────────────────────
-      gsap.set([badgeRef.current, headingRef.current, subRef.current, ctaRef.current], {
-        opacity: 0, y: 40
-      })
+    // ── Entrance animaties ──────────────────────────────────────
+    gsap.set([badgeRef.current, headingRef.current, subRef.current, ctaRef.current], {
+      opacity: 0,
+      y: 40,
+      force3D: true,
+    })
 
-      const tl = gsap.timeline({ delay: 0.2 })
-      tl.to(badgeRef.current,   { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" })
-        .to(headingRef.current, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, "-=0.3")
-        .to(subRef.current,     { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }, "-=0.4")
-        .to(ctaRef.current,     { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "-=0.3")
+    const tl = gsap.timeline({ delay: 0.15 })
+    tl.to(badgeRef.current,   { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" })
+      .to(headingRef.current, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, "-=0.3")
+      .to(subRef.current,     { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }, "-=0.4")
+      .to(ctaRef.current,     { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "-=0.3")
 
-      // ── GSAP ScrollTrigger — pin + scroll video ─────────
-      // Scroll-driven video scrubbing over 2.5 viewports
-      if (scrollVideo) {
-        scrollVideo.pause()
-        scrollVideo.currentTime = 0
+    // ── Video scrub — lerp op rAF voor butter-smooth GPU playback ──
+    video.pause()
+    video.currentTime = 0
 
-        ScrollTrigger.create({
-          trigger: container,
-          start: "top top",
-          end: "+=250%",   // 2.5 viewports
-          pin: true,
-          pinSpacing: true,
-          scrub: 1,
-          onUpdate: (self) => {
-            if (!scrollVideo.duration) return
-            scrollVideo.currentTime = self.progress * scrollVideo.duration
-          },
-        })
+    let targetTime = 0
+    let currentTime = 0
+    let rafId: number
+    const LERP = 0.08  // snelheid: lager = zachter
 
-        // Content fade-out terwijl je scrollt
-        gsap.to(contentRef.current, {
-          opacity: 0,
-          y: -60,
-          scale: 0.97,
-          ease: "power1.inOut",
-          scrollTrigger: {
-            trigger: container,
-            start: "top top",
-            end: "+=80%",
-            scrub: true,
-          },
-        })
-
-        // Overlay darkens tijdens scroll
-        gsap.fromTo(overlayRef.current,
-          { opacity: 0.4 },
-          {
-            opacity: 0.75,
-            ease: "none",
-            scrollTrigger: {
-              trigger: container,
-              start: "top top",
-              end: "+=150%",
-              scrub: true,
-            },
-          }
-        )
-
-        // Scroll video fade-in
-        gsap.fromTo(scrollVideo,
-          { opacity: 0 },
-          {
-            opacity: 1,
-            ease: "power1.in",
-            scrollTrigger: {
-              trigger: container,
-              start: "top top",
-              end: "+=30%",
-              scrub: true,
-            },
-          }
-        )
-
-        // Hero video fade-out
-        if (video) {
-          gsap.to(video, {
-            opacity: 0,
-            ease: "power1.in",
-            scrollTrigger: {
-              trigger: container,
-              start: "top top",
-              end: "+=30%",
-              scrub: true,
-            },
-          })
+    const tick = () => {
+      if (video.duration) {
+        // smooth interpolatie naar target
+        currentTime += (targetTime - currentTime) * LERP
+        // alleen schrijven als er verschil is (>0.01s) — voorkomt onnodige seeks
+        if (Math.abs(video.currentTime - currentTime) > 0.01) {
+          video.currentTime = currentTime
         }
       }
-    }, containerRef)
+      rafId = requestAnimationFrame(tick)
+    }
 
-    return () => ctx.revert()
+    const onScroll = () => {
+      if (!video.duration) return
+      const progress = Math.min(window.scrollY / (window.innerHeight * 1.5), 1)
+      targetTime = progress * video.duration
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true })
+    rafId = requestAnimationFrame(tick)
+
+    // ── Content fade-out terwijl site er overheen scrollt ──────
+    gsap.to(contentRef.current, {
+      opacity: 0,
+      y: -50,
+      ease: "power1.inOut",
+      force3D: true,
+      scrollTrigger: {
+        start: "top top",
+        end: `+=${window.innerHeight * 0.35}`,
+        scrub: true,
+      },
+    })
+
+    return () => {
+      window.removeEventListener("scroll", onScroll)
+      cancelAnimationFrame(rafId)
+      ScrollTrigger.getAll().forEach(t => t.kill())
+    }
   }, [])
 
   return (
-    <div ref={containerRef} className="relative w-full h-screen overflow-hidden">
-      {/* ── Achtergrond: loop video (zichtbaar bij load) ── */}
+    <div
+      className="sticky top-0 w-full h-screen overflow-hidden"
+      style={{ zIndex: 0 }}
+    >
+      {/* ── Scroll-driven video — GPU-geaccelereerd ── */}
       <video
         ref={videoRef}
-        src="/videos/hero/hero.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover object-center"
-      />
-
-      {/* ── Scroll-driven video (scrubbed via GSAP) ── */}
-      <video
-        ref={scrollVideoRef}
-        src="/videos/hero/scroll-source.mp4"
+        src="/videos/hero/scroll-source-scrub.mp4"
         muted
         playsInline
         preload="auto"
-        className="absolute inset-0 w-full h-full object-cover object-center opacity-0"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+        style={{
+          willChange: "transform",
+          transform: "translateZ(0)",
+        }}
       />
 
-      {/* ── Overlay ── */}
-      <div
-        ref={overlayRef}
-        className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-transparent"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/15" />
+      {/* ── Overlays ── */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
 
-      {/* ── Content ── */}
+      {/* ── Hero content ── */}
       <div
         ref={contentRef}
         className="relative z-10 h-full flex items-center px-6 lg:px-20"
+        style={{ willChange: "opacity, transform" }}
       >
         <div className="max-w-2xl">
           <span

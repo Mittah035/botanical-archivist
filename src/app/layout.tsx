@@ -50,7 +50,7 @@ export default function RootLayout({
       className={`${inter.variable} ${manrope.variable}`}
     >
       <body
-        className="min-h-full flex flex-col bg-background text-foreground antialiased"
+        className="min-h-full flex flex-col bg-background text-foreground antialiased overflow-x-hidden"
         style={{
           fontFamily: "var(--font-inter), sans-serif",
         }}

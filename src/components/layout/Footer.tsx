@@ -26,9 +26,9 @@ export function Footer() {
   return (
     <footer className="bg-primary text-white/80 mt-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-8 md:gap-12">
           {/* Brand */}
-          <div className="md:col-span-1">
+          <div className="col-span-3 md:col-span-1">
             <p className="text-white font-black text-sm uppercase tracking-[0.2em] font-display mb-4">
               Magicmushies
             </p>
