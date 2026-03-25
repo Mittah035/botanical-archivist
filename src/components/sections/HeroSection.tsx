@@ -74,7 +74,7 @@ export function HeroSection() {
             asChild
             variant="outline"
             size="lg"
-            className="border-white/40 text-white hover:bg-white/10 rounded-xl px-8 py-4 font-semibold"
+            className="bg-primary border-primary text-white hover:bg-primary/90 rounded-xl px-8 py-4 font-semibold"
           >
             <Link href="/blog">Educatieve Gids</Link>
           </Button>
