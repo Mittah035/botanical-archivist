@@ -7,6 +7,7 @@ export function AgeVerification() {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
+    if (process.env.NODE_ENV === "development") return
     const verified = localStorage.getItem("age-verified")
     if (!verified) {
       setShow(true)
