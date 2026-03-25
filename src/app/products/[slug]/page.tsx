@@ -10,7 +10,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   const product = getProductBySlug(params.slug)
   if (!product) return {}
   return {
-    title: `${product.name} — Botanical Archivist`,
+    title: `${product.name} — Magicmushies`,
     description: product.description,
   }
 }

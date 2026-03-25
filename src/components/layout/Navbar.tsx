@@ -63,7 +63,7 @@ export function Navbar() {
             href="/"
             className="text-base font-black text-primary uppercase tracking-[0.2em] font-display hover:opacity-80 transition-opacity"
           >
-            Botanical Archivist
+            Magicmushies
           </Link>
 
           {/* Right: Desktop nav + Cart */}

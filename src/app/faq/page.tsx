@@ -77,7 +77,7 @@ const faqs = [
       },
       {
         q: "Kan ik een bestelling annuleren?",
-        a: "Bestellingen kunnen worden geannuleerd zolang ze nog niet zijn verzonden. Neem direct contact op via info@botanical-archivist.nl met je ordernummer.",
+        a: "Bestellingen kunnen worden geannuleerd zolang ze nog niet zijn verzonden. Neem direct contact op via info@magicmushies.nl met je ordernummer.",
       },
       {
         q: "Hebben jullie een loyaliteitsprogramma?",

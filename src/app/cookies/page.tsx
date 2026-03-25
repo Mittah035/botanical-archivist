@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Cookiebeleid — Botanical Archivist",
+  title: "Cookiebeleid — Magicmushies",
   description: "Ons cookiebeleid beschrijft welke cookies wij gebruiken en waarom.",
 }
 
@@ -57,7 +57,7 @@ export default function CookiesPage() {
             </Section>
 
             <Section title="Geen marketing- of tracking cookies">
-              <p>Botanical Archivist plaatst geen cookies van derde partijen voor advertentie- of marketingdoeleinden. Wij retargeten onze bezoekers niet via Facebook, Google Ads of vergelijkbare platformen.</p>
+              <p>Magicmushies plaatst geen cookies van derde partijen voor advertentie- of marketingdoeleinden. Wij retargeten onze bezoekers niet via Facebook, Google Ads of vergelijkbare platformen.</p>
             </Section>
 
             <Section title="Uw keuzes">
@@ -65,7 +65,7 @@ export default function CookiesPage() {
             </Section>
 
             <Section title="Vragen?">
-              <p>Stuur uw vragen naar: info@botanical-archivist.nl</p>
+              <p>Stuur uw vragen naar: info@magicmushies.nl</p>
             </Section>
           </div>
         </div>

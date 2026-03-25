@@ -2,7 +2,7 @@ import { MetadataRoute } from "next"
 import { products } from "@/lib/data/products"
 import { blogPosts } from "@/lib/data/blog"
 
-const BASE_URL = "https://botanical-archivist.vercel.app"
+const BASE_URL = "https://magicmushies.vercel.app"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const productUrls = products.map((p) => ({

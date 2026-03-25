@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Privacybeleid — Botanical Archivist",
+  title: "Privacybeleid — Magicmushies",
   description: "Ons privacybeleid beschrijft hoe wij uw persoonsgegevens verzamelen, verwerken en beschermen.",
 }
 
@@ -13,8 +13,8 @@ export default function PrivacyPage() {
 
           <div className="prose prose-sm max-w-none space-y-6">
             <Section title="1. Verantwoordelijke">
-              <p>Botanical Archivist, gevestigd in Nederland, is verantwoordelijk voor de verwerking van persoonsgegevens zoals beschreven in dit privacybeleid.</p>
-              <p><strong>Contactgegevens:</strong> info@botanical-archivist.nl</p>
+              <p>Magicmushies, gevestigd in Nederland, is verantwoordelijk voor de verwerking van persoonsgegevens zoals beschreven in dit privacybeleid.</p>
+              <p><strong>Contactgegevens:</strong> info@magicmushies.nl</p>
             </Section>
 
             <Section title="2. Welke gegevens verzamelen wij?">
@@ -61,7 +61,7 @@ export default function PrivacyPage() {
                 <li>Recht op gegevensoverdraagbaarheid</li>
                 <li>Recht op bezwaar</li>
               </ul>
-              <p>Stuur uw verzoek naar: info@botanical-archivist.nl. Wij reageren binnen 30 dagen.</p>
+              <p>Stuur uw verzoek naar: info@magicmushies.nl. Wij reageren binnen 30 dagen.</p>
             </Section>
 
             <Section title="7. Cookies">

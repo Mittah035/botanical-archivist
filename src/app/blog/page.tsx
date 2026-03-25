@@ -6,7 +6,7 @@ import { StaggerChildren, StaggerItem } from "@/components/animations/StaggerChi
 import { blogPosts } from "@/lib/data/blog"
 
 export const metadata = {
-  title: "Blog & Kennisbank — Botanical Archivist",
+  title: "Blog & Kennisbank — Magicmushies",
   description: "Educatieve artikelen over psilocybine, microdosering, kweek en harm reduction.",
 }
 

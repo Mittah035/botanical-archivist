@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Disclaimer — Botanical Archivist",
-  description: "Disclaimer van Botanical Archivist over het gebruik van onze website en producten.",
+  title: "Disclaimer — Magicmushies",
+  description: "Disclaimer van Magicmushies over het gebruik van onze website en producten.",
 }
 
 export default function DisclaimerPage() {
@@ -31,7 +31,7 @@ export default function DisclaimerPage() {
             </Section>
 
             <Section title="Wetgeving">
-              <p>Verse psilocybine truffels zijn legaal in Nederland. Botanical Archivist verkoopt uitsluitend aan Nederlandse ingezetenen van 18+. De klant is verantwoordelijk voor het naleven van de lokale wetgeving. In veel landen zijn psilocybine producten illegaal.</p>
+              <p>Verse psilocybine truffels zijn legaal in Nederland. Magicmushies verkoopt uitsluitend aan Nederlandse ingezetenen van 18+. De klant is verantwoordelijk voor het naleven van de lokale wetgeving. In veel landen zijn psilocybine producten illegaal.</p>
             </Section>
 
             <Section title="Gebruik & Risico&apos;s">
@@ -45,7 +45,7 @@ export default function DisclaimerPage() {
             </Section>
 
             <Section title="Aansprakelijkheid">
-              <p>Botanical Archivist is niet aansprakelijk voor:</p>
+              <p>Magicmushies is niet aansprakelijk voor:</p>
               <ul className="list-disc pl-4 space-y-1 mt-2">
                 <li>Schade als gevolg van onjuist gebruik van producten</li>
                 <li>Juridische consequenties bij gebruik buiten Nederland</li>

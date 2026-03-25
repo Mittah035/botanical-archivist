@@ -30,7 +30,7 @@ export function HeroSection() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-xs uppercase tracking-[0.25em] text-emerald-400 font-medium mb-6 block"
         >
-          The Botanical Archivist
+          The Magicmushies
         </motion.span>
 
         <motion.h1

@@ -44,7 +44,7 @@ export function AgeVerification() {
               Leeftijdsverificatie
             </h2>
             <p className="text-foreground/60 text-sm mb-6">
-              Botanical Archivist verkoopt uitsluitend aan personen van{" "}
+              Magicmushies verkoopt uitsluitend aan personen van{" "}
               <strong>18 jaar of ouder</strong>. Truffels zijn een legaal psychoactief product.
               Gebruik verantwoordelijk.
             </p>

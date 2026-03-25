@@ -13,7 +13,7 @@ export default function OrderSuccessPage() {
             Bestelling geplaatst!
           </h1>
           <p className="text-foreground/60 text-sm mb-8">
-            Dank je voor je bestelling bij Botanical Archivist. Je ontvangt een
+            Dank je voor je bestelling bij Magicmushies. Je ontvangt een
             bevestiging per e-mail met je ordernummer en track & trace code.
           </p>
 

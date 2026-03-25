@@ -15,8 +15,8 @@ export async function POST(req: NextRequest) {
     // TODO: Resend email integration
     // const resend = new Resend(process.env.RESEND_API_KEY)
     // await resend.emails.send({
-    //   from: "noreply@botanical-archivist.nl",
-    //   to: "info@botanical-archivist.nl",
+    //   from: "noreply@magicmushies.nl",
+    //   to: "info@magicmushies.nl",
     //   subject: `Contact: ${subject || "Nieuw bericht"}`,
     //   html: `<p>Van: ${name} (${email})</p><p>${message}</p>`,
     // })

@@ -22,7 +22,7 @@ const values = [
   {
     icon: Heart,
     title: "Community & Educatie",
-    desc: "Botanical Archivist is meer dan een webshop. We bouwen een educatieve community rond verantwoord psychedelisch gebruik en persoonlijke groei.",
+    desc: "Magicmushies is meer dan een webshop. We bouwen een educatieve community rond verantwoord psychedelisch gebruik en persoonlijke groei.",
   },
 ]
 
@@ -33,8 +33,8 @@ const team = [
 ]
 
 export const metadata = {
-  title: "Over Ons — Botanical Archivist",
-  description: "Leer meer over Botanical Archivist — ons verhaal, onze waarden en onze toewijding aan veilige, legale en kwalitatieve psilocybine producten.",
+  title: "Over Ons — Magicmushies",
+  description: "Leer meer over Magicmushies — ons verhaal, onze waarden en onze toewijding aan veilige, legale en kwalitatieve psilocybine producten.",
 }
 
 export default function AboutPage() {
@@ -52,7 +52,7 @@ export default function AboutPage() {
               Het Archief van de Natuur
             </h1>
             <p className="text-white/70 text-lg max-w-2xl leading-relaxed">
-              Botanical Archivist werd geboren uit een eenvoudige overtuiging: dat de
+              Magicmushies werd geboren uit een eenvoudige overtuiging: dat de
               krachtigste medicinale stoffen die de natuur ons geeft, toegankelijk
               moeten zijn op een veilige, educatieve en legale manier.
             </p>
@@ -68,7 +68,7 @@ export default function AboutPage() {
               <div className="aspect-square rounded-2xl overflow-hidden relative">
                 <Image
                   src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80"
-                  alt="Botanisch bos — het verhaal van Botanical Archivist"
+                  alt="Botanisch bos — het verhaal van Magicmushies"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -76,7 +76,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <h2 className="font-display text-2xl font-bold text-primary mb-4">
-                  Waarom Botanical Archivist?
+                  Waarom Magicmushies?
                 </h2>
                 <p className="text-foreground/70 leading-relaxed mb-4">
                   In een markt vol anonieme webshops misten wij iets: een merk dat serieus
@@ -150,7 +150,7 @@ export default function AboutPage() {
             <div>
               <p className="text-sm font-bold text-amber-800 mb-1">Wettelijke Verklaring</p>
               <p className="text-xs text-amber-700 leading-relaxed">
-                Botanical Archivist verkoopt uitsluitend verse psilocybine truffels die legaal zijn
+                Magicmushies verkoopt uitsluitend verse psilocybine truffels die legaal zijn
                 in Nederland. Verkoop is voorbehouden aan personen van 18+. Wij verkopen niet aan
                 personen in landen waar het bezit strafbaar is. Lees onze volledige disclaimer voor meer informatie.
               </p>

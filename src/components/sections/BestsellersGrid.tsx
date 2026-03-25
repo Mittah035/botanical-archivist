@@ -40,7 +40,7 @@ export function BestsellersGrid() {
               <div className="md:w-3/5 overflow-hidden relative h-64 md:h-auto">
                 <Image
                   src="https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?w=800&q=80"
-                  alt="Microdose starter kit — Botanical Archivist"
+                  alt="Microdose starter kit — Magicmushies"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 768px) 100vw, 40vw"
@@ -149,7 +149,7 @@ export function BestsellersGrid() {
             <div className="md:w-2/5 relative h-48 md:h-auto">
               <Image
                 src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80"
-                alt="Educatieve kennisbank Botanical Archivist"
+                alt="Educatieve kennisbank Magicmushies"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 30vw"

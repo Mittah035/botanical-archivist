@@ -34,7 +34,7 @@ const testimonials = [
     name: "Daan M.",
     location: "Den Haag",
     rating: 5,
-    text: "Atlantis was perfect als eerste kennismaking. Botanical Archivist staat er ook op dat je de educatieve content leest. Voelt veiliger dan andere winkels.",
+    text: "Atlantis was perfect als eerste kennismaking. Magicmushies staat er ook op dat je de educatieve content leest. Voelt veiliger dan andere winkels.",
     product: "Atlantis Truffels",
     date: "September 2024",
   },

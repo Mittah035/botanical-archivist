@@ -9,7 +9,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "E-mail",
-    value: "info@botanical-archivist.nl",
+    value: "info@magicmushies.nl",
     desc: "Reactie binnen 1 werkdag",
   },
   {

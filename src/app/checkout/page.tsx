@@ -85,7 +85,7 @@ export default function CheckoutPage() {
         {/* Header */}
         <div className="text-center mb-10">
           <div className="text-3xl mb-2">🍄</div>
-          <h1 className="font-display text-2xl font-bold text-primary">Botanical Archivist</h1>
+          <h1 className="font-display text-2xl font-bold text-primary">Magicmushies</h1>
         </div>
 
         {/* Progress */}

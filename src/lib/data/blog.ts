@@ -94,7 +94,7 @@ Onderzoek suggereert dat microdosering kan bijdragen aan:
     content: `
 ## Wat heb je nodig?
 
-- Jouw Botanical Archivist growkit
+- Jouw Magicmushies growkit
 - Schoon water (lauw)
 - Plastic zak (bijgeleverd)
 - Schone omgeving

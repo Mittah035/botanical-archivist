@@ -20,8 +20,8 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: {
-    default: "Botanical Archivist — Premium Mycologische Webshop",
-    template: "%s | Botanical Archivist",
+    default: "Magicmushies — Premium Mycologische Webshop",
+    template: "%s | Magicmushies",
   },
   description:
     "Premium truffels, growkits en microdosering producten. Wetenschap-gedreven, aarde-gegroeid, discreet bezorgd. Alleen voor 18+.",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "magic truffels",
   ],
   openGraph: {
-    siteName: "Botanical Archivist",
+    siteName: "Magicmushies",
     type: "website",
     locale: "nl_NL",
   },

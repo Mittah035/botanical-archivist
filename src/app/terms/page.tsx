@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Algemene Voorwaarden — Botanical Archivist",
-  description: "De algemene voorwaarden van Botanical Archivist voor aankopen en gebruik van onze website.",
+  title: "Algemene Voorwaarden — Magicmushies",
+  description: "De algemene voorwaarden van Magicmushies voor aankopen en gebruik van onze website.",
 }
 
 export default function TermsPage() {
@@ -14,23 +14,23 @@ export default function TermsPage() {
           <div className="space-y-6">
             <Section title="Artikel 1 — Definities">
               <ul>
-                <li><strong>Botanical Archivist:</strong> de webshop, gevestigd in Nederland</li>
+                <li><strong>Magicmushies:</strong> de webshop, gevestigd in Nederland</li>
                 <li><strong>Klant:</strong> iedere meerderjarige (18+) persoon die een bestelling plaatst</li>
-                <li><strong>Overeenkomst:</strong> de koopovereenkomst tussen Botanical Archivist en de klant</li>
+                <li><strong>Overeenkomst:</strong> de koopovereenkomst tussen Magicmushies en de klant</li>
                 <li><strong>Producten:</strong> verse psilocybine truffels, growkits, microdoseer producten en accessoires</li>
               </ul>
             </Section>
 
             <Section title="Artikel 2 — Toepasselijkheid">
-              <p>Deze voorwaarden zijn van toepassing op alle aanbiedingen en overeenkomsten van Botanical Archivist. Afwijkingen zijn alleen geldig indien schriftelijk overeengekomen.</p>
+              <p>Deze voorwaarden zijn van toepassing op alle aanbiedingen en overeenkomsten van Magicmushies. Afwijkingen zijn alleen geldig indien schriftelijk overeengekomen.</p>
             </Section>
 
             <Section title="Artikel 3 — Leeftijdsverificatie">
-              <p>Botanical Archivist verkoopt uitsluitend aan personen van 18 jaar of ouder. Door een bestelling te plaatsen bevestigt de klant meerderjarig te zijn. Botanical Archivist behoudt het recht een bestelling te annuleren bij gegronde twijfel over de leeftijd.</p>
+              <p>Magicmushies verkoopt uitsluitend aan personen van 18 jaar of ouder. Door een bestelling te plaatsen bevestigt de klant meerderjarig te zijn. Magicmushies behoudt het recht een bestelling te annuleren bij gegronde twijfel over de leeftijd.</p>
             </Section>
 
             <Section title="Artikel 4 — Totstandkoming Overeenkomst">
-              <p>Een overeenkomst komt tot stand op het moment dat de klant een bevestigingsmail ontvangt na het plaatsen van een bestelling. Botanical Archivist behoudt het recht bestellingen te weigeren zonder opgave van reden.</p>
+              <p>Een overeenkomst komt tot stand op het moment dat de klant een bevestigingsmail ontvangt na het plaatsen van een bestelling. Magicmushies behoudt het recht bestellingen te weigeren zonder opgave van reden.</p>
             </Section>
 
             <Section title="Artikel 5 — Prijzen & Betaling">
@@ -51,7 +51,7 @@ export default function TermsPage() {
             </Section>
 
             <Section title="Artikel 8 — Aansprakelijkheid">
-              <p>Botanical Archivist is niet aansprakelijk voor schade als gevolg van onjuist gebruik van producten. De klant is verantwoordelijk voor het naleven van de lokale wetgeving. Onze aansprakelijkheid is in alle gevallen beperkt tot de orderwaarde.</p>
+              <p>Magicmushies is niet aansprakelijk voor schade als gevolg van onjuist gebruik van producten. De klant is verantwoordelijk voor het naleven van de lokale wetgeving. Onze aansprakelijkheid is in alle gevallen beperkt tot de orderwaarde.</p>
             </Section>
 
             <Section title="Artikel 9 — Legale Status">
@@ -63,7 +63,7 @@ export default function TermsPage() {
             </Section>
 
             <Section title="Artikel 11 — Contact">
-              <p>Botanical Archivist, Nederland<br />E-mail: info@botanical-archivist.nl</p>
+              <p>Magicmushies, Nederland<br />E-mail: info@magicmushies.nl</p>
             </Section>
           </div>
         </div>

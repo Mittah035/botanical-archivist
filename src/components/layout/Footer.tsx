@@ -30,7 +30,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <p className="text-white font-black text-sm uppercase tracking-[0.2em] font-display mb-4">
-              Botanical Archivist
+              Magicmushies
             </p>
             <p className="text-sm leading-relaxed text-white/60 max-w-xs">
               Premium mycologische specimens en professionele groeisets voor de
@@ -63,7 +63,7 @@ export function Footer() {
         <Separator className="bg-white/10 my-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
-          <p>© 2026 Botanical Archivist. Alle rechten voorbehouden.</p>
+          <p>© 2026 Magicmushies. Alle rechten voorbehouden.</p>
           <p>Truffels zijn legaal in Nederland. Alleen voor 18+.</p>
         </div>
       </div>

@@ -11,7 +11,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const post = getBlogPostBySlug(params.slug)
   if (!post) return {}
-  return { title: `${post.title} — Botanical Archivist`, description: post.excerpt }
+  return { title: `${post.title} — Magicmushies`, description: post.excerpt }
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
