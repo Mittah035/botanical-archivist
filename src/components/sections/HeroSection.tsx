@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
@@ -9,15 +8,15 @@ import { Button } from "@/components/ui/button"
 export function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center px-6 lg:px-20 overflow-hidden">
-      {/* Background image */}
+      {/* Background video */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1920&q=80"
-          alt="Donker bos met paddenstoelen — Botanical Archivist"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
+        <video
+          src="/videos/hero/hero.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/60 to-background/20" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/40" />
