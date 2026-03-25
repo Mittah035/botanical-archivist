@@ -106,7 +106,7 @@ export function BestsellersGrid() {
             <Link href="/products/golden-teacher-growkit">
               <div className="aspect-square overflow-hidden relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?w=500&q=80"
+                  src="/images/products/growkits/golden-teacher.jpg"
                   alt="Golden Teacher Growkit"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
