@@ -25,7 +25,7 @@ const categories = [
   {
     slug: "bundels",
     name: "Bundels",
-    image: "https://images.unsplash.com/photo-1509664389894-0d7b2f54e1d3?w=400&q=80",
+    image: "/images/categories/cat-bundels.jpg",
   },
   {
     slug: "nieuw",
