@@ -7,7 +7,7 @@ import Link from "next/link"
 const slides = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1400&q=80",
+    image: "/images/categories/cat-1.jpg",
     badge: "Bestseller",
     title: "Verse Psilocybine Truffels",
     subtitle: "Lab-getest & discreet bezorgd in heel Nederland",
@@ -15,7 +15,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?w=1400&q=80",
+    image: "/images/categories/cat-2.jpg",
     badge: "Nieuw",
     title: "Microdoseer Starter Kit",
     subtitle: "Alles voor jouw eerste 30 dagen — capsules, protocol & dagboek",
@@ -23,7 +23,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1471194402529-8e0f5a675de6?w=1400&q=80",
+    image: "/images/categories/cat-3.jpg",
     badge: "Populair",
     title: "Growkits — Kweek Thuis",
     subtitle: "Gegarandeerd resultaat, ook voor beginners",
