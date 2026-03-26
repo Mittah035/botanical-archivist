@@ -14,7 +14,7 @@ const strengthLabels = ["", "Mild", "Licht", "Gemiddeld", "Krachtig", "Extreem"]
 
 // Unieke afbeeldingen per slug
 const productImages: Record<string, string> = {
-  "hollandia-truffels": "https://images.unsplash.com/photo-1598030473978-2e7e40e82bf7?w=900&q=85",
+  "hollandia-truffels": "/images/products/truffels/hollandia.jpg",
   "atlantis-truffels": "/images/products/truffels/atlantis.jpg",
   "valhalla-truffels": "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=900&q=85",
   "mokum-truffels": "https://images.unsplash.com/photo-1444492417251-9c84a5fa18e0?w=900&q=85",

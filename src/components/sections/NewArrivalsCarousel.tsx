@@ -29,7 +29,7 @@ const products = [
   {
     slug: "hollandia-truffels",
     name: "Hollandia Truffels — 15 gram",
-    image: "https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?w=400&q=80",
+    image: "/images/products/truffels/hollandia.jpg",
     price: 1995,
     originalPrice: 2795,
   },
