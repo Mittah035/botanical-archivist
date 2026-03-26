@@ -1,175 +1,102 @@
 "use client"
 
-import { useEffect, useRef } from "react"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useState, useEffect } from "react"
+import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
-gsap.registerPlugin(ScrollTrigger)
+const slides = [
+  {
+    id: 1,
+    image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1400&q=80",
+    badge: "Bestseller",
+    title: "Verse Psilocybine Truffels",
+    subtitle: "Lab-getest & discreet bezorgd in heel Nederland",
+    cta: { label: "Shop Truffels", href: "/products?category=truffels" },
+  },
+  {
+    id: 2,
+    image: "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?w=1400&q=80",
+    badge: "Nieuw",
+    title: "Microdoseer Starter Kit",
+    subtitle: "Alles voor jouw eerste 30 dagen — capsules, protocol & dagboek",
+    cta: { label: "Bekijk Kit", href: "/products/microdose-starter-kit" },
+  },
+  {
+    id: 3,
+    image: "https://images.unsplash.com/photo-1471194402529-8e0f5a675de6?w=1400&q=80",
+    badge: "Populair",
+    title: "Growkits — Kweek Thuis",
+    subtitle: "Gegarandeerd resultaat, ook voor beginners",
+    cta: { label: "Shop Growkits", href: "/products?category=growkits" },
+  },
+]
 
 export function HeroSection() {
-  const videoRef    = useRef<HTMLVideoElement>(null)
-  const contentRef  = useRef<HTMLDivElement>(null)
-  const badgeRef    = useRef<HTMLSpanElement>(null)
-  const headingRef  = useRef<HTMLHeadingElement>(null)
-  const subRef      = useRef<HTMLParagraphElement>(null)
-  const ctaRef      = useRef<HTMLDivElement>(null)
+  const [current, setCurrent] = useState(0)
 
   useEffect(() => {
-    const video = videoRef.current
-    if (!video) return
-
-    // ── GPU layer voor butter-smooth compositing ────────────────
-    gsap.set(video, { force3D: true, willChange: "transform" })
-
-    // ── Entrance animaties ──────────────────────────────────────
-    gsap.set([badgeRef.current, headingRef.current, subRef.current, ctaRef.current], {
-      opacity: 0,
-      y: 40,
-      force3D: true,
-    })
-
-    const tl = gsap.timeline({ delay: 0.15 })
-    tl.to(badgeRef.current,   { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" })
-      .to(headingRef.current, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, "-=0.3")
-      .to(subRef.current,     { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }, "-=0.4")
-      .to(ctaRef.current,     { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "-=0.3")
-
-    // ── Video scrub — lerp op rAF voor butter-smooth GPU playback ──
-    video.pause()
-    video.currentTime = 0
-
-    let targetTime = 0
-    let currentTime = 0
-    let rafId: number
-    const LERP = 0.08  // snelheid: lager = zachter
-
-    const tick = () => {
-      if (video.duration) {
-        // smooth interpolatie naar target
-        currentTime += (targetTime - currentTime) * LERP
-        // alleen schrijven als er verschil is (>0.01s) — voorkomt onnodige seeks
-        if (Math.abs(video.currentTime - currentTime) > 0.01) {
-          video.currentTime = currentTime
-        }
-      }
-      rafId = requestAnimationFrame(tick)
-    }
-
-    const onScroll = () => {
-      if (!video.duration) return
-      const progress = Math.min(window.scrollY / (window.innerHeight * 1.5), 1)
-      targetTime = progress * video.duration
-    }
-
-    window.addEventListener("scroll", onScroll, { passive: true })
-    rafId = requestAnimationFrame(tick)
-
-    // ── Content fade-out terwijl site er overheen scrollt ──────
-    gsap.to(contentRef.current, {
-      opacity: 0,
-      y: -50,
-      ease: "power1.inOut",
-      force3D: true,
-      scrollTrigger: {
-        start: "top top",
-        end: `+=${window.innerHeight * 0.35}`,
-        scrub: true,
-      },
-    })
-
-    return () => {
-      window.removeEventListener("scroll", onScroll)
-      cancelAnimationFrame(rafId)
-      ScrollTrigger.getAll().forEach(t => t.kill())
-    }
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length)
+    }, 5000)
+    return () => clearInterval(timer)
   }, [])
 
+  const slide = slides[current]
+
   return (
-    <div
-      className="sticky top-0 w-full h-screen overflow-hidden"
-      style={{ zIndex: 0 }}
-    >
-      {/* ── Scroll-driven video — GPU-geaccelereerd ── */}
-      <video
-        ref={videoRef}
-        src="/videos/hero/scroll-source-scrub.mp4"
-        muted
-        playsInline
-        preload="auto"
-        className="absolute inset-0 w-full h-full object-cover object-center"
-        style={{
-          willChange: "transform",
-          transform: "translateZ(0)",
-        }}
-      />
-
-      {/* ── Overlays ── */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/30 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
-
-      {/* ── Hero content ── */}
-      <div
-        ref={contentRef}
-        className="relative z-10 h-full flex items-center px-6 lg:px-20"
-        style={{ willChange: "opacity, transform" }}
-      >
-        <div className="max-w-2xl">
-          <span
-            ref={badgeRef}
-            className="text-xs uppercase tracking-[0.25em] text-emerald-400 font-medium mb-6 block"
+    <section className="px-4 lg:px-8 py-3">
+      <div className="max-w-7xl mx-auto relative overflow-hidden rounded-2xl h-[260px] sm:h-[360px] lg:h-[460px] bg-gray-100">
+        {/* Slides */}
+        {slides.map((s, i) => (
+          <div
+            key={s.id}
+            className={`absolute inset-0 transition-opacity duration-700 ${
+              i === current ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
           >
-            🇳🇱 100% Legaal · EU Lab-getest · Discreet bezorgd
-          </span>
-
-          <h1
-            ref={headingRef}
-            className="font-display text-5xl md:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-8"
-          >
-            Voel je beter,{" "}
-            <br />
-            <span className="text-emerald-400">denk helderder.</span>
-          </h1>
-
-          <p
-            ref={subRef}
-            className="text-white/80 text-lg md:text-xl mb-10 max-w-lg leading-relaxed"
-          >
-            Premium truffels, growkits en microdoseer producten — veilig, legaal en
-            getest in gecertificeerde Europese laboratoria. Voor beginners én
-            gevorderden. Gratis verzending boven €50.
-          </p>
-
-          <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4">
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary text-white hover:bg-primary/90 rounded-xl px-8 py-4 font-bold transition-all hover:-translate-y-0.5 active:scale-95"
-            >
-              <Link href="/products">
-                Bekijk alle producten
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="bg-white/10 border-white/30 text-white hover:bg-white/20 rounded-xl px-8 py-4 font-semibold backdrop-blur-sm"
-            >
-              <Link href="/blog">Kennisbank & Gidsen</Link>
-            </Button>
+            <Image
+              src={s.image}
+              alt={s.title}
+              fill
+              className="object-cover"
+              priority={i === 0}
+              sizes="(max-width: 768px) 100vw, 90vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/30 to-transparent" />
           </div>
+        ))}
+
+        {/* Content */}
+        <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-10">
+          <span className="inline-block bg-white text-primary text-xs font-bold px-3 py-1 rounded-full mb-3 w-fit">
+            {slide.badge}
+          </span>
+          <h1 className="font-display font-black text-white text-2xl sm:text-3xl lg:text-5xl mb-2 leading-tight">
+            {slide.title}
+          </h1>
+          <p className="text-white/80 text-sm lg:text-base mb-5 max-w-md">{slide.subtitle}</p>
+          <Link
+            href={slide.cta.href}
+            className="inline-flex items-center bg-white text-primary font-bold text-sm px-5 py-2.5 rounded-full hover:bg-gray-100 transition-colors w-fit"
+          >
+            {slide.cta.label}
+          </Link>
+        </div>
+
+        {/* Dots */}
+        <div className="absolute bottom-5 right-6 flex gap-2">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              aria-label={`Slide ${i + 1}`}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                i === current ? "w-6 bg-white" : "w-2 bg-white/50"
+              }`}
+            />
+          ))}
         </div>
       </div>
-
-      {/* ── Scroll indicator ── */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/50">
-        <span className="text-xs tracking-widest uppercase">Scroll</span>
-        <div className="w-px h-12 bg-gradient-to-b from-white/40 to-transparent animate-pulse" />
-      </div>
-    </div>
+    </section>
   )
 }
