@@ -31,7 +31,7 @@ const products = [
   {
     slug: "golden-teacher-growkit",
     name: "Golden Teacher Growkit",
-    image: "https://images.unsplash.com/photo-1471194402529-8e0f5a675de6?w=600&q=80",
+    image: "/images/products/growkits/golden-teacher.jpg",
     price: 2995,
     originalPrice: 3995,
     rating: 5.0,
