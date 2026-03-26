@@ -1,8 +1,4 @@
-"use client"
-
 import { Star } from "lucide-react"
-import { FadeIn } from "@/components/animations/FadeIn"
-import { StaggerChildren, StaggerItem } from "@/components/animations/StaggerChildren"
 
 const testimonials = [
   {
@@ -49,78 +45,66 @@ const testimonials = [
   },
 ]
 
-const frosted = "bg-white/10 backdrop-blur-xl border border-white/15 rounded-2xl"
+const stats = [
+  { value: "4.9/5", label: "Gemiddelde beoordeling" },
+  { value: "2.400+", label: "Tevreden klanten" },
+  { value: "98%", label: "Zou ons aanbevelen" },
+  { value: "1-3 dagen", label: "Bezorgd in Nederland" },
+]
 
 export function TestimonialsSection() {
   return (
-    <section className="py-24 px-6 md:px-20 overflow-hidden">
+    <section className="py-10 px-4 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <FadeIn className="mb-10">
-          <span className="text-[10px] uppercase tracking-[0.25em] text-emerald-400 font-medium mb-2 block">
-            Ervaringen
-          </span>
-          <h2 className="font-display text-3xl font-bold text-white">
+
+        {/* Header */}
+        <div className="mb-6">
+          <h2 className="font-display text-xl font-bold text-gray-900">
             Dit zeggen onze klanten
           </h2>
-        </FadeIn>
+        </div>
 
-        {/* ── MOBIEL: carousel ── */}
+        {/* Stats bar */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          {stats.map((stat) => (
+            <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center">
+              <p className="font-display text-2xl font-extrabold text-primary mb-0.5">{stat.value}</p>
+              <p className="text-xs text-gray-500">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Reviews — mobile scroll / desktop grid */}
         <div
-          className="md:hidden flex gap-4 overflow-x-auto pb-4 -mx-6 px-6 snap-x snap-mandatory"
+          className="flex gap-4 overflow-x-auto pb-3 -mx-4 px-4 lg:mx-0 lg:px-0 lg:grid lg:grid-cols-3 snap-x snap-mandatory lg:snap-none"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" } as React.CSSProperties}
         >
           {testimonials.map((t) => (
-            <div key={t.name} className={`${frosted} snap-start shrink-0 w-[82vw] p-6 flex flex-col`}>
+            <div
+              key={t.name}
+              className="snap-start shrink-0 w-[82vw] lg:w-auto bg-white rounded-xl border border-gray-100 p-5 flex flex-col"
+            >
+              {/* Stars */}
               <div className="flex gap-0.5 mb-3">
-                {[1,2,3,4,5].map((i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <p className="text-sm text-white/70 leading-relaxed flex-1 mb-4">&ldquo;{t.text}&rdquo;</p>
-              <div className="border-t border-white/10 pt-4">
-                <p className="text-xs font-bold text-white">{t.name}</p>
-                <p className="text-xs text-white/40">{t.location} · {t.product}</p>
+
+              {/* Review text */}
+              <p className="text-sm text-gray-600 leading-relaxed flex-1 mb-4">
+                &ldquo;{t.text}&rdquo;
+              </p>
+
+              {/* Author */}
+              <div className="border-t border-gray-100 pt-3">
+                <p className="text-sm font-semibold text-gray-900">{t.name}</p>
+                <p className="text-xs text-gray-400">{t.location} · {t.product}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* ── DESKTOP: 3-kolom grid ── */}
-        <StaggerChildren className="hidden md:grid grid-cols-3 gap-6">
-          {testimonials.map((t) => (
-            <StaggerItem key={t.name}>
-              <div className={`${frosted} p-6 h-full flex flex-col`}>
-                <div className="flex gap-0.5 mb-3">
-                  {[1,2,3,4,5].map((i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-                <p className="text-sm text-white/70 leading-relaxed flex-1 mb-4">&ldquo;{t.text}&rdquo;</p>
-                <div className="border-t border-white/10 pt-4">
-                  <p className="text-xs font-bold text-white">{t.name}</p>
-                  <p className="text-xs text-white/40">{t.location} · {t.product}</p>
-                </div>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerChildren>
-
-        {/* Stats bar */}
-        <FadeIn delay={0.3}>
-          <div className="mt-12 bg-primary/80 backdrop-blur-xl border border-white/10 rounded-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { value: "4.9/5", label: "Gemiddelde beoordeling" },
-              { value: "2.400+", label: "Tevreden klanten" },
-              { value: "98%", label: "Zou ons aanbevelen" },
-              { value: "1-3 dagen", label: "Bezorgd in Nederland" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="font-display text-2xl font-extrabold text-emerald-300 mb-1">{stat.value}</p>
-                <p className="text-xs text-white/50 uppercase tracking-wider">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </FadeIn>
       </div>
     </section>
   )

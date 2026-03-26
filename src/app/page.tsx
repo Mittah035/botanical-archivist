@@ -2,6 +2,7 @@ import { HeroSection } from "@/components/sections/HeroSection"
 import { NewArrivalsCarousel } from "@/components/sections/NewArrivalsCarousel"
 import { FeaturedCategories } from "@/components/sections/FeaturedCategories"
 import { BestsellersGrid } from "@/components/sections/BestsellersGrid"
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection"
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
       <NewArrivalsCarousel />
       <FeaturedCategories />
       <BestsellersGrid />
+      <TestimonialsSection />
     </div>
   )
 }
