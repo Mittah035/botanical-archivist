@@ -5,17 +5,17 @@ const categories = [
   {
     slug: "truffels",
     name: "Truffels",
-    image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400&q=80",
+    image: "/images/categories/cat-1.jpg",
   },
   {
     slug: "growkits",
     name: "Growkits",
-    image: "https://images.unsplash.com/photo-1471194402529-8e0f5a675de6?w=400&q=80",
+    image: "/images/categories/cat-2.jpg",
   },
   {
     slug: "microdosering",
     name: "Microdosering",
-    image: "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?w=400&q=80",
+    image: "/images/categories/cat-3.jpg",
   },
   {
     slug: "accessoires",
