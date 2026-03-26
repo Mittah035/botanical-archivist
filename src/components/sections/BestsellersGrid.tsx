@@ -9,7 +9,7 @@ const products = [
   {
     slug: "microdose-starter-kit",
     name: "Microdose Starter Kit — 30 Capsules",
-    image: "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?w=600&q=80",
+    image: "/images/products/microdosering/starter-kit.jpg",
     price: 3495,
     originalPrice: 4995,
     rating: 4.9,
