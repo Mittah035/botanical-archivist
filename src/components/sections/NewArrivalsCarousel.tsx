@@ -41,8 +41,8 @@ const products = [
     originalPrice: null,
   },
   {
-    slug: "tampanensis-truffels",
-    name: "Psilocybe Tampanensis — 15 gram",
+    slug: "high-hawaiians-truffels",
+    name: "High Hawaiians Magic Truffles – 15 gram",
     image: "https://images.unsplash.com/photo-1447710441604-5bdc41bc6517?w=400&q=80",
     price: 1895,
     originalPrice: 2595,
