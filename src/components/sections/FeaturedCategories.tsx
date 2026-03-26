@@ -30,7 +30,7 @@ const categories = [
   {
     slug: "nieuw",
     name: "Nieuw",
-    image: "https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?w=400&q=80",
+    image: "/images/categories/cat-nieuw.jpg",
   },
 ]
 
