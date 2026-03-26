@@ -34,8 +34,8 @@ const products = [
     originalPrice: 2795,
   },
   {
-    slug: "aztec-god-truffels",
-    name: "Aztec God Truffels — 15 gram",
+    slug: "mexicana-truffels",
+    name: "Mexicana Magic Truffels – 15 gram",
     image: "https://images.unsplash.com/photo-1509664389894-0d7b2f54e1d3?w=400&q=80",
     price: 2195,
     originalPrice: null,
