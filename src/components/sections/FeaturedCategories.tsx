@@ -8,13 +8,13 @@ const categories = [
     image: "/images/categories/cat-1.jpg",
   },
   {
-    slug: "growkits",
-    name: "Growkits",
+    slug: "microdosering",
+    name: "Microdosering",
     image: "/images/categories/cat-2.jpg",
   },
   {
-    slug: "microdosering",
-    name: "Microdosering",
+    slug: "growkits",
+    name: "Growkits",
     image: "/images/categories/cat-3.jpg",
   },
   {
