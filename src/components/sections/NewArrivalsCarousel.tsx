@@ -8,7 +8,7 @@ const products = [
   {
     slug: "atlantis-truffels",
     name: "Atlantis Truffels — 15 gram (Nic 2%)",
-    image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400&q=80",
+    image: "/images/products/truffels/atlantis.jpg",
     price: 1795,
     originalPrice: 2495,
   },
