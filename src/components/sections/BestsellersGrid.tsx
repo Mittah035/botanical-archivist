@@ -30,9 +30,9 @@ const products = [
   },
   {
     slug: "golden-teacher-growkit",
-    name: "Golden Teacher Growkit",
+    name: "Golden Teacher XL Paddo Kweekset 2100cc",
     image: "/images/products/growkits/golden-teacher.jpg",
-    price: 2995,
+    price: 4499,
     originalPrice: 3995,
     rating: 5.0,
     reviews: 62,
