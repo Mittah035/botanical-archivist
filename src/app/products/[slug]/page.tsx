@@ -23,3 +23,4 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
   return <ProductDetailClient product={product!} related={related} />
 }
+// force redeploy Thu Mar 26 16:07:19 WEST 2026
