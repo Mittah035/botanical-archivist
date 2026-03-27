@@ -6,8 +6,9 @@ export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const product = getProductBySlug(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const product = getProductBySlug(slug)
   if (!product) return {}
   return {
     title: `${product.name} — Magicmushies`,
@@ -15,12 +16,12 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   }
 }
 
-export default function ProductDetailPage({ params }: { params: { slug: string } }) {
-  const product = getProductBySlug(params.slug)
+export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const product = getProductBySlug(slug)
   if (!product) notFound()
 
   const related = getRelatedProducts(product!, 4)
 
   return <ProductDetailClient product={product!} related={related} />
 }
-// force redeploy Thu Mar 26 16:07:19 WEST 2026
